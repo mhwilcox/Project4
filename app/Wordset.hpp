@@ -5,6 +5,7 @@ const int SIZES[] = { 11, 23, 41, 83, 163, 331, 641, 1283, 2579, 5147, 10243, 20
 // I promise no test case will require you to expand after 163847, or get to the associated load factor.
 
 #include <string>
+#include <iostream>
 
 // You may assume, in writing this function, that the given
 // string consists solely of lower-case letters.
@@ -48,7 +49,22 @@ public:
 
 private:
 	// You may declare private functions and member variables here.
+
+	//int loadFactor;
+// n = # of keys;  m = table size;	load factor = n/m
+
+	int cap = 0;
+	int count;
+	std::string * table;
+
+	void setCapacity(int newCap) {
+		cap = newCap;
+	}
+
+	int rehash(int startHash);
+	
 };
+
 
 
 #endif
