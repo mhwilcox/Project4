@@ -19,12 +19,12 @@ std::cout<<"hash"<<std::endl;
 
 	std::cout <<"This is sum4hash of "<< s << ": "<< sum4hash << std::endl;
 
-	if( table[sum4hash] != null ) {
+	if( table[sum4hash] == 0 ) {
 		return sum4hash;
 	}
 	else {
 		// increase the value of the hash (h(k) + i^2) % mod
-		sum4hash = rehash(sum4hash);
+		sum4hash = rehash(sum4hash, 0);
 	}
 
 	return sum4hash; // this is not correct.
@@ -33,11 +33,12 @@ std::cout<<"hash"<<std::endl;
 
 WordSet::WordSet()
 {
+	cap = 0;
+	setCapacity(cap);
 	int size = getCapacity();
 //	std::string s[size]; // would be static.  Look up heap vs stack memory.
 	table = new std::string[ size ] ;
 	count = 0;
-	cap = 0;
 }
 
 WordSet::~WordSet()
@@ -51,11 +52,11 @@ void WordSet::insert(std::string s)
 	int tabSize = getCapacity();
 	std::cout<<"this is after capacity()"<<std::endl;
 	int numKeys = getCount();
-	int tempHashVal = hashFunction(s, BASE_TO_USE, getCapacity());
+	int tempHashVal = hashFunction( s, BASE_TO_USE, getCapacity() );
 	// test load-factor
 	double one = 1;
 	double test = (numKeys*one) / (tabSize);
-std::cout<<"numKeys: "<<numKeys<<", tabSize: "<<tabSize<<std::endl;
+
 	std::cout<<"load limit test: "<< (test) << std::endl;
 
 	if ( test >= LOAD_LIMIT ) {
@@ -76,15 +77,11 @@ std::cout<<"numKeys: "<<numKeys<<", tabSize: "<<tabSize<<std::endl;
 
 		table[tempHashVal] = s;
 
-	}
-std::cout<<"outside if hash val : "<<tempHashVal<<std::endl;
-	if (table[tempHashVal] != null) { 
-		table[tempHashVal]=s;
-	}
-	else {
-		tempHashVal = hashFunction(tempHashVal, BASE_TO_USE, getCapacity());
+	}	// end (if test >= load limit)
 
-	}
+// input string into hash array
+std::cout<<"outside if hash val : "<<tempHashVal<<std::endl;
+	table[tempHashVal] = s;
 		
 }
 
@@ -114,15 +111,14 @@ int WordSet::getCapacity() const
 }
 
 // increase the value of the hash (h(k) + i^2) % mod
-int rehash(int startHash) {
+int rehash(int startHash, int inc) {
 	int temp = startHash;
-	int i = 0;
-	int mod = getCapacity()
+	int mod = getCapacity();
 
-	while ( table[temp] != null) {
-		temp = (temp + pow(i,2)) % mod;
-		i++;
-		rehash(temp);		
+	while ( table[temp] != 0) {
+		temp = (temp + pow(inc,2)) % mod;
+		inc++;
+		rehash(temp,inc);		
 	}
 	return temp;
 }

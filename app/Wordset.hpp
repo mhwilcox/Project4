@@ -6,6 +6,7 @@ const int SIZES[] = { 11, 23, 41, 83, 163, 331, 641, 1283, 2579, 5147, 10243, 20
 
 #include <string>
 #include <iostream>
+#include <cmath>
 
 // You may assume, in writing this function, that the given
 // string consists solely of lower-case letters.
@@ -47,6 +48,9 @@ public:
 	// return how large the underlying array is.
 	int getCapacity() const;
 
+	// return value that will not cause a collision
+	int rehash(int startHash);
+
 private:
 	// You may declare private functions and member variables here.
 
@@ -61,7 +65,7 @@ private:
 		cap = newCap;
 	}
 
-	int rehash(int startHash);
+	//int rehash(int startHash);
 	
 };
 
