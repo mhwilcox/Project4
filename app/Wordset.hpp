@@ -52,7 +52,7 @@ public:
 	int rehashIn(int startHash, int inc);
 
 	// return rehash value for search
-	int findRehash(int startHash, int inc, std::string s);
+	int findRehash(int startHash, int inc, const std::string s) const;
 
 private:
 	// You may declare private functions and member variables here.
