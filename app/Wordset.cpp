@@ -18,16 +18,8 @@ std::cout<<"hash"<<std::endl;
 	}
 
 	std::cout <<"This is sum4hash of "<< s << ": "<< sum4hash << std::endl;
-
-	if( table[sum4hash] == 0 ) {
-		return sum4hash;
-	}
-	else {
-		// increase the value of the hash (h(k) + i^2) % mod
-		sum4hash = rehash(sum4hash, 0);
-	}
-
-	return sum4hash; // this is not correct.
+	
+	return sum4hash; // 
 }
 
 
@@ -51,7 +43,7 @@ void WordSet::insert(std::string s)
 	count= count +1;;	// increment count
 	int tabSize = getCapacity();
 	std::cout<<"this is after capacity()"<<std::endl;
-	int numKeys = getCount();
+	int numKeys = getCount() + 1;
 	int tempHashVal = hashFunction( s, BASE_TO_USE, getCapacity() );
 	// test load-factor
 	double one = 1;
@@ -72,17 +64,32 @@ void WordSet::insert(std::string s)
 
 		for (int k = 0; k < numKeys - 1; k++) {
 			int tmHash = hashFunction(temp[k], BASE_TO_USE, getCapacity());
-			table[tmHash] = temp[k];
+			if(table[tmHash] == 0) {
+				table[tmHash] = temp[k];
+				count++;
+			}
+			else {
+				tmHash = rehashIn(tmHash, 0);
+				table[tmHash] = s;
+				count++;
+			}
 		}
 
-		table[tempHashVal] = s;
+
 
 	}	// end (if test >= load limit)
 
 // input string into hash array
 std::cout<<"outside if hash val : "<<tempHashVal<<std::endl;
-	table[tempHashVal] = s;
-		
+	if (table[tempHashVal] == 0) {
+		table[tempHashVal] = s;
+		count++;
+	}
+	else {
+		tempHashVal = rehashIn(tempHashVal, 0);
+		table[tempHashVal] = s;
+		count++;
+	}	// end if-else for insert without enlarging array
 }
 
 
@@ -93,7 +100,14 @@ bool WordSet::contains(std::string s) const
 		return true;
 	}
 	else {
-		return false;  
+		int temp = findRehash(tmH,0,s);
+		if (table[temp] == s) {
+			return true;
+		}
+		else {
+			return false;
+		}
+
 	}
 }
 
@@ -111,14 +125,30 @@ int WordSet::getCapacity() const
 }
 
 // increase the value of the hash (h(k) + i^2) % mod
-int rehash(int startHash, int inc) {
+int rehashIn(int startHash, int inc) {
 	int temp = startHash;
 	int mod = getCapacity();
 
 	while ( table[temp] != 0) {
-		temp = (temp + pow(inc,2)) % mod;
-		inc++;
-		rehash(temp,inc);		
+		temp = (temp + (inc*inc) ) % mod;
+		rehashIn(temp,inc+1);		
+	}
+	return temp;
+}
+
+int findRehash(int startHash, int inc, std::string s) {
+	int temp = startHash;
+	int mod = getCapacity();
+	int cnt = getCount();
+
+	while (table[temp] != s) {
+		if( inc == cnt ) {
+			std::cout<<"The string is not in the hash: "<<std::endl;
+		}
+		else {
+			temp = (temp + (inc*inc) ) % mod;
+			findRehash(temp, inc+1);
+		}
 	}
 	return temp;
 }

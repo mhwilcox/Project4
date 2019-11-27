@@ -48,8 +48,11 @@ public:
 	// return how large the underlying array is.
 	int getCapacity() const;
 
-	// return value that will not cause a collision
-	int rehash(int startHash);
+	// return value that will not cause a collision|| insert()
+	int rehashIn(int startHash, int inc);
+
+	// return rehash value for search
+	int findRehash(int startHash, int inc, std::string s);
 
 private:
 	// You may declare private functions and member variables here.
