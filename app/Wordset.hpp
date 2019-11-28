@@ -51,8 +51,8 @@ public:
 	// return value that will not cause a collision|| insert()
 	int rehashIn(int startHash, int inc);
 
-	// return rehash value for search
-	int findRehash(int startHash, int inc, const std::string s) const;
+	// resizes table when load limit is reached
+	void reSize(std::string * origTable);
 
 private:
 	// You may declare private functions and member variables here.
