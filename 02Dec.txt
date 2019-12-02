@@ -1,0 +1,134 @@
+[==========] Running 7 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from HashFunctionTest
+[ RUN      ] HashFunctionTest.Hf1
+This is sum4hash of dbc: 4146
+[       OK ] HashFunctionTest.Hf1 (0 ms)
+[----------] 1 test from HashFunctionTest (0 ms total)
+
+[----------] 1 test from TableTest
+[ RUN      ] TableTest.Tab1
+This is the capacity before insert: 11
+This is sum4hash of dbc: 10
+load limit test: 0.0909091
+outside if hash val : 10
+### the insert works without rehashing.
+This is sum4hash of dbc: 10
+contains:	dbc
+[       OK ] TableTest.Tab1 (1 ms)
+[----------] 1 test from TableTest (1 ms total)
+
+[----------] 2 tests from ResizeTest
+[ RUN      ] ResizeTest.Tab2
+This is the capacity before insert: 11
+This is sum4hash of sleepy: 4
+load limit test: 0.0909091
+outside if hash val : 4
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of happy: 4
+load limit test: 0.0909091
+outside if hash val : 4
+$$$ This is the rehash value: 5
+This is the capacity before insert: 11
+This is sum4hash of dopey: 8
+load limit test: 0.0909091
+outside if hash val : 8
+### the insert works without rehashing.
+/home/ics46b/projects/proj4/gtest/tests1.cpp:36: Failure
+Value of: ws.getCapacity() == 23
+  Actual: false
+Expected: true
+This is the capacity before insert: 11
+This is sum4hash of sneezy: 6
+load limit test: 0.0909091
+outside if hash val : 6
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of datalink: 4
+load limit test: 0.0909091
+outside if hash val : 4
+$$$ This is the rehash value: 9
+This is the capacity before insert: 11
+This is sum4hash of australia: 10
+load limit test: 0.0909091
+outside if hash val : 10
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of guacamole: 8
+load limit test: 0.0909091
+outside if hash val : 8
+$$$ This is the rehash value: -9
+This is the capacity before insert: 11
+This is sum4hash of phylum: 3
+load limit test: 0.0909091
+outside if hash val : 3
+### the insert works without rehashing.
+This is sum4hash of happy: 4
+contains:	happy
+(0) : 4	 : sleepy
+final value of inc 1
+value at inc: happyThis is sum4hash of dopey: 8
+contains:	dopey
+[  FAILED  ] ResizeTest.Tab2 (5 ms)
+[ RUN      ] ResizeTest.Tab3
+This is the capacity before insert: 11
+This is sum4hash of sleepy: 4
+load limit test: 0.0909091
+outside if hash val : 4
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of happy: 4
+load limit test: 0.0909091
+outside if hash val : 4
+$$$ This is the rehash value: 5
+This is the capacity before insert: 11
+This is sum4hash of dopey: 8
+load limit test: 0.0909091
+outside if hash val : 8
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of sneezy: 6
+load limit test: 0.0909091
+outside if hash val : 6
+### the insert works without rehashing.
+/home/ics46b/projects/proj4/gtest/tests1.cpp:56: Failure
+Value of: ws.getCapacity() == 23
+  Actual: false
+Expected: true
+This is the capacity before insert: 11
+This is sum4hash of datalink: 4
+load limit test: 0.0909091
+outside if hash val : 4
+$$$ This is the rehash value: 9
+This is the capacity before insert: 11
+This is sum4hash of australia: 10
+load limit test: 0.0909091
+outside if hash val : 10
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of guacamole: 8
+load limit test: 0.0909091
+outside if hash val : 8
+$$$ This is the rehash value: -9
+This is the capacity before insert: 11
+This is sum4hash of phylum: 3
+load limit test: 0.0909091
+outside if hash val : 3
+### the insert works without rehashing.
+This is sum4hash of happy: 4
+contains:	happy
+(0) : 4	 : sleepy
+final value of inc 1
+value at inc: happyThis is sum4hash of dopey: 8
+contains:	dopey
+This is the capacity before insert: 11
+This is sum4hash of one: 5
+load limit test: 0.0909091
+outside if hash val : 5
+$$$ This is the rehash value: -9
+This is the capacity before insert: 11
+This is sum4hash of two: 10
+load limit test: 0.0909091
+outside if hash val : 10
+$$$ This is the rehash value: -4

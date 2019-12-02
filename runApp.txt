@@ -1,0 +1,68 @@
+this is resize test1 Tab2. 
+This is the capacity before insert: 11
+This is sum4hash of sleepy: 4
+load limit test: 0.0909091
+outside if hash val : 4
+### the insert works without rehashing.
+This is the capacity before insert: 11
+This is sum4hash of happy: 4
+load limit test: 0.181818
+outside if hash val : 4
+$$$ This is the rehash value: 5
+sleepy and happy inserted correctly, going to check capacity. 
+capacity is 11.   ******************************************************
+
+This is the capacity before insert: 11
+This is sum4hash of dopey: 8
+load limit test: 0.272727
+this is resize. capaicty is: 23
+this is tabSize: 11
+This is sum4hash of sleepy: 2
+This is sum4hash of happy: 19
+outside if hash val : 8
+### the insert works without rehashing.
+after insert dopey
+capacity is 23.          ////////////////////////////   // 
+
+This is the capacity before insert: 23
+This is sum4hash of sneezy: 16
+load limit test: 0.173913
+outside if hash val : 16
+### the insert works without rehashing.
+This is the capacity before insert: 23
+This is sum4hash of datalink: 17
+load limit test: 0.217391
+outside if hash val : 17
+### the insert works without rehashing.
+This is the capacity before insert: 23
+This is sum4hash of australia: 7
+load limit test: 0.26087
+this is resize. capaicty is: 41
+this is tabSize: 23
+This is sum4hash of sleepy: 23
+This is sum4hash of dopey: 38
+This is sum4hash of sneezy: 3
+This is sum4hash of datalink: 23
+This is sum4hash of happy: 28
+outside if hash val : 7
+### the insert works without rehashing.
+This is the capacity before insert: 41
+This is sum4hash of guacamole: 10
+load limit test: 0.170732
+outside if hash val : 10
+### the insert works without rehashing.
+This is the capacity before insert: 41
+This is sum4hash of phylum: 10
+load limit test: 0.195122
+outside if hash val : 10
+$$$ This is the rehash value: 11
+inserted: sneezy, datalink, australia, guacamole, and phylum
+This is sum4hash of happy: 28
+contains:	happy
+contains 'happy' 
+This is sum4hash of dopey: 38
+contains:	dopey
+contains 'dopey' 
+
+number of strings in table: 8
+this is the capacity: 41

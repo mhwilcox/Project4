@@ -52,7 +52,7 @@ public:
 	int rehashIn(int startHash, int inc);
 
 	// resizes table when load limit is reached
-	void reSize(std::string * origTable);
+	void reSize(std::string * origTable, int tabSize);
 
 private:
 	// You may declare private functions and member variables here.
@@ -60,11 +60,11 @@ private:
 	//int loadFactor;
 // n = # of keys;  m = table size;	load factor = n/m
 
-	int cap = 0;
+	int cap;
 	int count;
 	std::string * table;
 
-	void setCapacity(int newCap) {
+	void setCap(int newCap) {
 		cap = newCap;
 	}
 
