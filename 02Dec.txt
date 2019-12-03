@@ -7,94 +7,73 @@
 
 [----------] 1 test from TableTest
 [ RUN      ] TableTest.Tab1
-contains:	dbc
 [       OK ] TableTest.Tab1 (0 ms)
 [----------] 1 test from TableTest (0 ms total)
 
 [----------] 2 tests from ResizeTest
 [ RUN      ] ResizeTest.Tab2
-contains:	happy
-contains:	dopey
 [       OK ] ResizeTest.Tab2 (0 ms)
 [ RUN      ] ResizeTest.Tab3
-contains:	happy
-contains:	dopey
-[       OK ] ResizeTest.Tab3 (1 ms)
-[----------] 2 tests from ResizeTest (1 ms total)
+[       OK ] ResizeTest.Tab3 (0 ms)
+[----------] 2 tests from ResizeTest (0 ms total)
 
 [----------] 1 test from SampleTest
 [ RUN      ] SampleTest.Abandoning
-contains:	abandoning
 [       OK ] SampleTest.Abandoning (0 ms)
 [----------] 1 test from SampleTest (0 ms total)
 
 [----------] 2 tests from ConvertWords
 [ RUN      ] ConvertWords.AntToArt
 
-start of solution: ant -->  
+start of solution:  
 
 This is what s1 needs to turn into: art
 s1: ant s2: art
 s1: ant and s2: art share a char at: 2
+
+    char doesn't match at: 1 pushing to adjChar. 
 s1: ant and s2: art share a char at: 0
 
-chars that need adjusting: 1
-wtemp = aat
-wtemp = abt
-wtemp = act
-wtemp = adt
-wtemp = aet
-wtemp = aft
-wtemp = agt
-wtemp = aht
-wtemp = ait
-wtemp = ajt
-wtemp = akt
-wtemp = alt
-wtemp = amt
-wtemp = ant
-wtemp = aot
-wtemp = apt
-wtemp = aqt
-wtemp = art
+char that is being adjusted: 1
+wtemp = aat	wtemp = abt	wtemp = act	wtemp = adt	wtemp = aet	wtemp = aft	wtemp = agt	wtemp = aht	wtemp = ait	wtemp = ajt	wtemp = akt	wtemp = alt	wtemp = amt	wtemp = ant	wtemp = aot	wtemp = apt	wtemp = aqt	wtemp = art	
 THIS IS CORRECT!!!! wtemp: art
 
-**********-------------************: ant --> art
-[       OK ] ConvertWords.AntToArt (216 ms)
+**********-------------************: ant
+/home/ics46b/projects/proj4/gtest/tests1.cpp:86: Failure
+Value of: r == "ant --> art"
+  Actual: false
+Expected: true
+[  FAILED  ] ConvertWords.AntToArt (219 ms)
 [ RUN      ] ConvertWords.AntToEat
 
-start of solution: ant -->  
+start of solution:  
 
 This is what s1 needs to turn into: eat
 s1: ant s2: eat
 s1: ant and s2: eat share a char at: 2
 
-chars that need adjusting: 1
+    char doesn't match at: 1 pushing to adjChar. 
 
-chars that need adjusting: 0
-wtemp = aat
-wtemp = abt
-wtemp = act
-wtemp = adt
-wtemp = aet
-wtemp = aft
-wtemp = agt
-wtemp = aht
-wtemp = ait
-wtemp = ajt
-wtemp = akt
-wtemp = alt
-wtemp = amt
-wtemp = ant
-wtemp = aot
-wtemp = apt
-wtemp = aqt
-wtemp = art
-wtemp = ast
-wtemp = att
-wtemp = aut
-wtemp = avt
-wtemp = awt
-wtemp = axt
-wtemp = ayt
-wtemp = azt
+    char doesn't match at: 0 pushing to adjChar. 
+
+char that is being adjusted: 1
+wtemp = aat	wtemp = abt	wtemp = act	this is a real word: act
+
+char that is being adjusted: 0
+wtemp = act	wtemp = bct	wtemp = cct	wtemp = dct	wtemp = ect	wtemp = fct	wtemp = gct	wtemp = hct	wtemp = ict	wtemp = jct	wtemp = kct	wtemp = lct	wtemp = mct	wtemp = nct	wtemp = oct	wtemp = pct	wtemp = qct	wtemp = rct	wtemp = sct	wtemp = tct	wtemp = uct	wtemp = vct	wtemp = wct	wtemp = xct	wtemp = yct	wtemp = zct	
+**********-------------************: ant --> 
+/home/ics46b/projects/proj4/gtest/tests1.cpp:98: Failure
+Value of: r == "ant --> aft --> oft --> oat --> eat"
+  Actual: false
+Expected: true
+[  FAILED  ] ConvertWords.AntToEat (202 ms)
+[----------] 2 tests from ConvertWords (422 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 5 test cases ran. (422 ms total)
+[  PASSED  ] 5 tests.
+[  FAILED  ] 2 tests, listed below:
+[  FAILED  ] ConvertWords.AntToArt
+[  FAILED  ] ConvertWords.AntToEat
+
+ 2 FAILED TESTS
