@@ -43,6 +43,7 @@ This is sum4hash of sleepy: 23
 This is sum4hash of dopey: 38
 This is sum4hash of sneezy: 3
 This is sum4hash of datalink: 23
+*********  resize rehash . inc: 0
 This is sum4hash of happy: 28
 outside if hash val : 7
 ### the insert works without rehashing.
