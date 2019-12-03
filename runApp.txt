@@ -1,69 +1,432 @@
-this is resize test1 Tab2. 
-This is the capacity before insert: 11
-This is sum4hash of sleepy: 4
-load limit test: 0.0909091
-outside if hash val : 4
-### the insert works without rehashing.
-This is the capacity before insert: 11
-This is sum4hash of happy: 4
-load limit test: 0.181818
-outside if hash val : 4
-$$$ This is the rehash value: 5
-sleepy and happy inserted correctly, going to check capacity. 
-capacity is 11.   ******************************************************
+second words test. 
+size of adjChar: 0
+size of path: 1
+side of stk: 0
+solution at beginning of convert:: 
+s1: ant s2: eat
+s1: ant and s2: eat share a char at: 2
 
-This is the capacity before insert: 11
-This is sum4hash of dopey: 8
-load limit test: 0.272727
-this is resize. capaicty is: 23
-this is tabSize: 11
-This is sum4hash of sleepy: 2
-This is sum4hash of happy: 19
-outside if hash val : 8
-### the insert works without rehashing.
-after insert dopey
-capacity is 23.          ////////////////////////////   // 
+    char doesn't match at: 1 pushing to adjChar. 
 
-This is the capacity before insert: 23
-This is sum4hash of sneezy: 16
-load limit test: 0.173913
-outside if hash val : 16
-### the insert works without rehashing.
-This is the capacity before insert: 23
-This is sum4hash of datalink: 17
-load limit test: 0.217391
-outside if hash val : 17
-### the insert works without rehashing.
-This is the capacity before insert: 23
-This is sum4hash of australia: 7
-load limit test: 0.26087
-this is resize. capaicty is: 41
-this is tabSize: 23
-This is sum4hash of sleepy: 23
-This is sum4hash of dopey: 38
-This is sum4hash of sneezy: 3
-This is sum4hash of datalink: 23
-*********  resize rehash . inc: 0
-This is sum4hash of happy: 28
-outside if hash val : 7
-### the insert works without rehashing.
-This is the capacity before insert: 41
-This is sum4hash of guacamole: 10
-load limit test: 0.170732
-outside if hash val : 10
-### the insert works without rehashing.
-This is the capacity before insert: 41
-This is sum4hash of phylum: 10
-load limit test: 0.195122
-outside if hash val : 10
-$$$ This is the rehash value: 11
-inserted: sneezy, datalink, australia, guacamole, and phylum
-This is sum4hash of happy: 28
-contains:	happy
-contains 'happy' 
-This is sum4hash of dopey: 38
-contains:	dopey
-contains 'dopey' 
+    char doesn't match at: 0 pushing to adjChar. 
 
-number of strings in table: 8
-this is the capacity: 41
+char that is being adjusted: 1
+just before for loop: ant
+	************* doesn't match char to s2 : act
+	************* doesn't match char to s2 : aft
+word alreay in path:  ant
+   **********   
+   ******   
+
+	************* doesn't match char to s2 : apt
+	************* doesn't match char to s2 : art
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: ant, curr val: act
+path size: 2
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: act
+word alreay in path:  act
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: act, curr val: aft
+path size: 3
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 1
+just before for loop: aft
+word alreay in path:  act
+   **********   
+   ******   
+
+word alreay in path:  aft
+   **********   
+   ******   
+
+word alreay in path:  ant
+   **********   
+   ******   
+
+	************* doesn't match char to s2 : apt
+	************* doesn't match char to s2 : art
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: aft, curr val: apt
+path size: 4
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: apt
+word alreay in path:  apt
+   **********   
+   ******   
+
+	************* doesn't match char to s2 : opt
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: apt, curr val: art
+path size: 5
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 1
+just before for loop: art
+word alreay in path:  act
+   **********   
+   ******   
+
+word alreay in path:  aft
+   **********   
+   ******   
+
+word alreay in path:  ant
+   **********   
+   ******   
+
+word alreay in path:  apt
+   **********   
+   ******   
+
+word alreay in path:  art
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: art, curr val: ant
+path size: 5
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: ant
+word alreay in path:  ant
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: ant, curr val: act
+path size: 5
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 1
+just before for loop: act
+word alreay in path:  act
+   **********   
+   ******   
+
+word alreay in path:  aft
+   **********   
+   ******   
+
+word alreay in path:  ant
+   **********   
+   ******   
+
+word alreay in path:  apt
+   **********   
+   ******   
+
+word alreay in path:  art
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: act, curr val: apt
+path size: 5
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: apt
+word alreay in path:  apt
+   **********   
+   ******   
+
+	************* doesn't match char to s2 : opt
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: apt, curr val: art
+path size: 5
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 1
+just before for loop: art
+word alreay in path:  act
+   **********   
+   ******   
+
+word alreay in path:  aft
+   **********   
+   ******   
+
+word alreay in path:  ant
+   **********   
+   ******   
+
+word alreay in path:  apt
+   **********   
+   ******   
+
+word alreay in path:  art
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: art, curr val: aft
+path size: 5
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: aft
+word alreay in path:  aft
+   **********   
+   ******   
+
+	************* doesn't match char to s2 : oft
+w==25 and no match to s2.
+adjChar size: 3,  after adjChar size: 2
+before val: aft, curr val: opt
+path size: 6
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 1
+just before for loop: opt
+wtemp = oat	||  This is if chars match from current word to s2.
+	this is path.at wtemp: opt
+adjChar size: 2,  after adjChar size: 1
+before val: opt, curr val: apt
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: apt
+word alreay in path:  apt
+   **********   
+   ******   
+
+word alreay in path:  opt
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: apt, curr val: art
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: art
+word alreay in path:  art
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: art, curr val: ant
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: ant
+word alreay in path:  ant
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: ant, curr val: act
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: act
+word alreay in path:  act
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: act, curr val: opt
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: opt
+word alreay in path:  apt
+   **********   
+   ******   
+
+word alreay in path:  opt
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: opt, curr val: apt
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: apt
+word alreay in path:  apt
+   **********   
+   ******   
+
+word alreay in path:  opt
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: apt, curr val: art
+path size: 7
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: art
+word alreay in path:  art
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: art, curr val: oft
+path size: 8
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: oft
+word alreay in path:  aft
+   **********   
+   ******   
+
+word alreay in path:  oft
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: oft, curr val: aft
+path size: 8
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: aft
+word alreay in path:  aft
+   **********   
+   ******   
+
+word alreay in path:  oft
+   **********   
+   ******   
+
+w==25 and no match to s2.
+adjChar size: 2,  after adjChar size: 1
+before val: aft, curr val: oat
+path size: 8
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 0
+just before for loop: oat
+	************* doesn't match char to s2 : bat
+	************* doesn't match char to s2 : cat
+
+THIS IS CORRECT!!!! wtemp: eat
+&&&  this is path.at wtemp: oat
+adjChar size: 1,  after adjChar size: 0
+before val: apt, curr val: art
+path size: 9
+   ********   
+  8888888   
+ ******* 
+
+
+
+char that is being adjusted: 1633837427
+just before for loop: art
