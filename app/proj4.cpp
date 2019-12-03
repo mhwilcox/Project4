@@ -30,7 +30,7 @@ void loadWordsIntoTable(WordSet & words, std::istream & in)
 std::string convert(std::string s1, std::string s2, const WordSet & words)
 {
 	std::queue<std::string> wrdQueue;
-	std::string solution = s1 + " --> ";
+	std::string solution;
 	std::queue<int> adjChar;
 
 	std::cout<<"\nstart of solution: "<< solution<< " \n" << std::endl;
@@ -47,26 +47,29 @@ std::string convert(std::string s1, std::string s2, const WordSet & words)
 		}
 	}
 
+wrdQueue.push(s1);
 	while(!adjChar.empty()) {
 		int temp = adjChar.front();
 		std::cout<<"\nchars that need adjusting: "<< temp << std::endl;;
+		std::string wtemp = wrdQueue.front(); 
+			for ( int w = 0 ; w < 26 ; w++) {
+				wtemp[temp] = 'a' + w;
+				std::cout<<"wtemp = "<<wtemp<<"\t";
+				if (wtemp == s2) {
+					std::cout<<"\nTHIS IS CORRECT!!!! wtemp: " << wtemp <<std::endl;
+					wrdQueue.push(wtemp);
+					break;
+				}
+			}
+
+// adds new string to solution
+		if(solution == ""){
+			solution = wrdQueue.front();
+			wrdQueue.pop();
+		}
+		solution += " --> " + wtemp;
 		adjChar.pop();
 	}
-
-	std::string wtemp = s1; 
-	for ( int w = 0 ; w < 26 ; w++) {
-		wtemp[1] = 'a' + w;
-		std::cout<<"wtemp = "<<wtemp<<std::endl;
-		if (wtemp == s2) {
-			std::cout<<"THIS IS CORRECT!!!! wtemp: " << wtemp <<std::endl;
-			wrdQueue.push(wtemp);
-			break;
-		}
-	}
-wtemp = wrdQueue.front();
-wrdQueue.pop();
-
-	solution += wtemp;
 
 	std::cout<<"\n**********-------------************: "<<solution<<std::endl;
 
