@@ -13,7 +13,7 @@ int hashFunction(std::string s, int base, int mod)
 	for (int i = 0; i < s.length(); i++) {
 		sum4hash = (  (sum4hash * BASE_TO_USE) + (s[i] -'a')  ) % mod;
 	}
-	std::cout <<"This is sum4hash of "<< s << ": "<< sum4hash << std::endl;
+//	std::cout <<"This is sum4hash of "<< s << ": "<< sum4hash << std::endl;
 	
 	return sum4hash; // 
 }
@@ -36,7 +36,7 @@ WordSet::~WordSet()
 
 void WordSet::insert(std::string s)
 {
-	std::cout<<"This is the capacity before insert: "<<getCapacity()<<std::endl;
+//	std::cout<<"This is the capacity before insert: "<<getCapacity()<<std::endl;
 	int tabSize = getCapacity();
 	int numKeys = getCount() + 1;
 	int tempHashVal = hashFunction( s, BASE_TO_USE, getCapacity() );
@@ -44,15 +44,15 @@ void WordSet::insert(std::string s)
 	double one = 1;
 	double test = (numKeys*one) / (tabSize);
 
-	std::cout<<"load limit test: "<< (test) << std::endl;
+//	std::cout<<"load limit test: "<< (test) << std::endl;
 	if (test >= LOAD_LIMIT) {
 		reSize(table, tabSize);
 	}
 	
 // input string into hash array
-std::cout<<"outside if hash val : "<<tempHashVal<<std::endl;
+//std::cout<<"outside if hash val : "<<tempHashVal<<std::endl;
 	if (table[tempHashVal] == ""){
-		std::cout<<"### the insert works without rehashing."<<std::endl;
+//		std::cout<<"### the insert works without rehashing."<<std::endl;
 		table[tempHashVal] = s;
 		count++;
 	}
@@ -63,7 +63,7 @@ std::cout<<"outside if hash val : "<<tempHashVal<<std::endl;
 			count++;
 			inc++;
 		}	//end while
-		std::cout<<"$$$ This is the rehash value: "<<(tempHashVal + (inc * inc) ) % getCapacity()<<std::endl;
+//		std::cout<<"$$$ This is the rehash value: "<<(tempHashVal + (inc * inc) ) % getCapacity()<<std::endl;
 		table[(tempHashVal + (inc * inc) ) % getCapacity()] = s;
 	}
 
@@ -89,14 +89,14 @@ bool WordSet::contains(std::string s) const
 		}
 
 		//std::cout << "final value of inc " << inc << std::endl; 
-		std::cout<<"value at inc: "<< table[(tmH + (inc*inc) ) % getCapacity()] << std::endl;
+//		std::cout<<"value at inc: "<< table[(tmH + (inc*inc) ) % getCapacity()] << std::endl;
 
 		if(table[(tmH + (inc*inc) ) % getCapacity()] == s ){
-			std::cout<<"$$$$$$$$$$$  contains is True."<<std::endl;
+			//std::cout<<"$$$$$$$$$$$  contains is True."<<std::endl;
 			return true;
 		}
 		else {
-			std::cout<<"$$$$$$$$$$$  contains is False."<<std::endl;
+			//std::cout<<"$$$$$$$$$$$  contains is False."<<std::endl;
 			return false;
 		}
 	}
@@ -135,8 +135,8 @@ void WordSet::reSize(std::string * origTable, int tabSize) {
 	cap = cap + 1;
 	setCap(cap);
 	table = new std::string[ getCapacity() ];
-	std::cout<<"this is resize. capaicty is: "<<getCapacity()<<std::endl;
-std::cout<<"this is tabSize: "<< tabSize <<std::endl;
+//	std::cout<<"this is resize. capaicty is: "<<getCapacity()<<std::endl;
+//std::cout<<"this is tabSize: "<< tabSize <<std::endl;
 	for(int i = 0; i < tabSize; i++) {
 		if(origTable[i] != "") {
 			int tempHashVal = hashFunction(origTable[i], BASE_TO_USE, getCapacity());
@@ -146,6 +146,7 @@ std::cout<<"this is tabSize: "<< tabSize <<std::endl;
 			}
 			else {
 				while(table[(tempHashVal + (inc*inc) ) % getCapacity()] != "") {
+					//std::cout<<"*********  resize rehash . inc: "<< inc <<std::endl;
 					inc++;
 				}	// end while loop
 				table[(tempHashVal + (inc*inc) ) % getCapacity()] = origTable[i];
