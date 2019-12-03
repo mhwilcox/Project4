@@ -62,9 +62,8 @@ std::cout<<"solution at beginning of convert:: "<<solution<<std::endl;
 wrdQueue.push(s1);
 
 	std::string wtemp = wrdQueue.front();
-	std::string realWord;
 
-	while(!wrdQueue.empty()) {
+	while(wtemp != s2) {
 		int numCharAdj = adjChar.front();
 		std::cout<<"\nchar that is being adjusted: "<< numCharAdj << std::endl;
 		wtemp = wrdQueue.front();
@@ -106,7 +105,9 @@ wrdQueue.push(s1);
 					std::cout<<"w==25 and no match to s2."<<std::endl;
 				}
 			}	// end for loop
-
+	if(wtemp == s2){
+		break;
+	}
 	std::cout<<"adjChar size: "<<adjChar.size();
 		adjChar.pop();
 	std::cout<<",  after adjChar size: "<<adjChar.size()<<std::endl;

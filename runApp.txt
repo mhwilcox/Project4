@@ -419,14 +419,18 @@ just before for loop: oat
 
 THIS IS CORRECT!!!! wtemp: eat
 &&&  this is path.at wtemp: oat
-adjChar size: 1,  after adjChar size: 0
-before val: apt, curr val: art
-path size: 9
-   ********   
-  8888888   
- ******* 
+path value: oat
+path value: opt
+path value: aft
+path value: act
+adding to solution: act
+adding to solution: aft
+adding to solution: opt
+adding to solution: oat
+adding to solution: eat
+stk size: 0
 
+**********-------------************: ant --> act --> aft --> opt --> oat --> eat
+clearing map, queue, & stack.
 
-
-char that is being adjusted: 1633837427
-just before for loop: art
+return of 'ant to eat': ant --> act --> aft --> opt --> oat --> eat
