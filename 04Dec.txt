@@ -1,0 +1,97 @@
+[==========] Running 7 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from HashFunctionTest
+[ RUN      ] HashFunctionTest.Hf1
+[       OK ] HashFunctionTest.Hf1 (0 ms)
+[----------] 1 test from HashFunctionTest (0 ms total)
+
+[----------] 1 test from TableTest
+[ RUN      ] TableTest.Tab1
+[       OK ] TableTest.Tab1 (0 ms)
+[----------] 1 test from TableTest (0 ms total)
+
+[----------] 2 tests from ResizeTest
+[ RUN      ] ResizeTest.Tab2
+[       OK ] ResizeTest.Tab2 (0 ms)
+[ RUN      ] ResizeTest.Tab3
+[       OK ] ResizeTest.Tab3 (1 ms)
+[----------] 2 tests from ResizeTest (1 ms total)
+
+[----------] 1 test from SampleTest
+[ RUN      ] SampleTest.Abandoning
+[       OK ] SampleTest.Abandoning (0 ms)
+[----------] 1 test from SampleTest (0 ms total)
+
+[----------] 2 tests from ConvertWords
+[ RUN      ] ConvertWords.AntToArt
+size of adjChar: 0
+size of path: 1
+side of stk: 0
+solution at beginning of convert:: 
+s1: ant s2: art
+s1: ant and s2: art share a char at: 2
+
+    char doesn't match at: 1 pushing to adjChar. 
+s1: ant and s2: art share a char at: 0
+s2 acheived. break
+adding to solution: art
+stk size: 0
+
+**********-------------************: ant --> art
+clearing map, queue, & stack.
+
+[       OK ] ConvertWords.AntToArt (220 ms)
+[ RUN      ] ConvertWords.AntToEat
+size of adjChar: 0
+size of path: 1
+side of stk: 0
+solution at beginning of convert:: 
+s1: ant s2: eat
+s1: ant and s2: eat share a char at: 2
+
+    char doesn't match at: 1 pushing to adjChar. 
+
+    char doesn't match at: 0 pushing to adjChar. 
+s2 acheived. break
+trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): opt
+this is temp: eat this is what's before temp: oat and this is what's before that: opt
+count == 1
+add append to stack. 
+
+trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): aft
+this is temp: oat this is what's before temp: opt and this is what's before that: aft
+count == 1
+add append to stack. 
+
+trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): act
+this is temp: opt this is what's before temp: aft and this is what's before that: act
+count == 1
+add append to stack. 
+
+trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): ant
+this is temp: aft this is what's before temp: act and this is what's before that: ant
+count == 1
+path.at(append)==s1  break!
+adding to solution: aft
+adding to solution: opt
+adding to solution: oat
+adding to solution: eat
+stk size: 0
+
+**********-------------************: ant --> aft --> opt --> oat --> eat
+clearing map, queue, & stack.
+
+/home/ics46b/projects/proj4/gtest/tests1.cpp:98: Failure
+Value of: r == "ant --> aft --> oft --> oat --> eat"
+  Actual: false
+Expected: true
+[  FAILED  ] ConvertWords.AntToEat (204 ms)
+[----------] 2 tests from ConvertWords (424 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 5 test cases ran. (425 ms total)
+[  PASSED  ] 6 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] ConvertWords.AntToEat
+
+ 1 FAILED TEST

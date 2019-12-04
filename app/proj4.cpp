@@ -38,6 +38,8 @@ std::string convert(std::string s1, std::string s2, const WordSet & words)
 	std::string append;
 	std::stack<std::string> stk;
 
+	int count = 0;
+
 	path.emplace(s1,"");
 
 
@@ -65,36 +67,26 @@ wrdQueue.push(s1);
 
 	while(wtemp != s2) {
 		int numCharAdj = adjChar.front();
-		std::cout<<"\nchar that is being adjusted: "<< numCharAdj << std::endl;
 		wtemp = wrdQueue.front();
-		std::cout<<"just before for loop: "<<wtemp<<std::endl;
 		// what I want to do is cycle through to see if s2 shows up and if it doesn't then check to see if 
 		//   the cycle contains any real words and try them. 
 			for ( int w = 0 ; w < 26 ; w++) {
 				wtemp[numCharAdj] = 'a' + w;
 				if(path.find(wtemp) != path.end()) { 
-					std::cout<<"word alreay in path:  "<< wtemp <<std::endl;
-					std::cout<<"   **********   \n   ******   \n"<<std::endl;
 				}
 				else if (wtemp == s2) {
-					std::cout<<"\nTHIS IS CORRECT!!!! wtemp: " << wtemp <<std::endl;
 					path.emplace(wtemp, wrdQueue.front());
-					std::cout<<"&&&  this is path.at wtemp: "<<path.at(wtemp)<<std::endl;
 					wrdQueue.push(wtemp);
 					wrdQueue.pop();
 					break;
 				}
 				else if (words.contains(wtemp)) { 
 					if (wtemp[numCharAdj] == s2[numCharAdj]) {
-					std::cout<<"wtemp = "<<wtemp<<"\t||  ";
-						std::cout<<"This is if chars match from current word to s2."<<std::endl;
 						path.emplace(wtemp, wrdQueue.front());
-						std::cout<<"\tthis is path.at wtemp: "<<path.at(wtemp)<<std::endl;
 						wrdQueue.push(wtemp);
 						break;	
 					}
 					else {
-						std::cout<<"\t************* doesn't match char to s2 : "<< wtemp <<std::endl;
 						wrdQueue.push(wtemp);
 					}
 					
@@ -102,35 +94,51 @@ wrdQueue.push(s1);
 				else if (w==25) {
 					adjChar.push(numCharAdj);
 					wrdQueue.push(wrdQueue.front());
-					std::cout<<"w==25 and no match to s2."<<std::endl;
 				}
 			}	// end for loop
 	if(wtemp == s2){
+		std::cout<<"s2 acheived. break"<<std::endl;
 		break;
 	}
-	std::cout<<"adjChar size: "<<adjChar.size();
 		adjChar.pop();
-	std::cout<<",  after adjChar size: "<<adjChar.size()<<std::endl;
 		std::string val=wrdQueue.front();
-		std::cout<<"before val: "<<val;
-		wrdQueue.pop();
-		std::cout<<", curr val: "<<wrdQueue.front()<<std::endl;
-		path.emplace(wrdQueue.front(), val);
-	std::cout<<"path size: "<<path.size()<<std::endl;
-	std::cout<<"   ********   \n  8888888   \n ******* \n\n"<<std::endl;
-		
-	}	// end while !adjChar.isEmpty()
 
-	//std::cout<<"path size: "<<path.size()<<std::endl;
+		wrdQueue.pop();
+		// val is previous and wrdQueue.front() is the current word
+		
+		path.emplace(wrdQueue.front(), val);
+
+	}	// end while !adjChar.isEmpty()
 	
 	stk.push(temp);
 
-	//int x = 0;
-	while(path.at(temp) != s1) {
+	while(path.at(temp) != s1) {	// 
 		append = path.at(temp);
-		std::cout<<"path value: "<< path.at(temp) <<std::endl;
+		count = 0;
+		std::string beforeVal = path.at(append);
+		std::string curWord = wrdQueue.front();
+		std::cout<<"trying to fix emplacemtn. wrdQueue.front(): "<<curWord<<" and path.at(val): "<<beforeVal<<std::endl;
+		for( int i = 0; i < s2.length(); i++) {
+			if ( curWord[i] != beforeVal[i] ) {
+				count++;
+			}
+			
+		}
+		std::cout<<"this is temp: "<<temp <<" this is what's before temp: "<<path.at(temp)
+			<<" and this is what's before that: "<<path.at(append)<<std::endl;
+
+		if ( count == 1 ) {
+			std::cout<<"count == 1"<<std::endl;
+			if(path.at(append) == s1) {
+				std::cout<<"path.at(append)==s1  break!"<<std::endl;
+				break;
+			}
+			temp = path.at(append);	
+		}
+		std::cout<<"add append to stack. \n"<<std::endl;
 		stk.push(append);
 		temp = append;
+		
 	}
 	stk.push(s1);
 
