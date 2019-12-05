@@ -194,7 +194,6 @@ wrdQueue.push(s1);
 	}
 	
 		path.clear();
-std::cout<<"solution:  "<<solution<<std::endl;
 	return solution;  // return solution
 }
 
