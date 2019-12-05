@@ -67,7 +67,6 @@ wrdQueue.push(s1);
 				}
 				else if (wtemp == s2) {	// if wtemp == s2 then put in in path and break from the loop;
 					path.emplace(wtemp, secndWd);
-					std::cout<<"!!!****!!!  emplace: "<<wtemp<<", "<<secndWd<<std::endl;
 					wrdQueue.push(wtemp);
 					break;
 				}
@@ -82,13 +81,11 @@ wrdQueue.push(s1);
 
 						if (wtemp[numCharAdj] == s2[numCharAdj] && check == 1 ) {	// if wtemp has a char match with s2
 							path.emplace(wtemp, secndWd);	//	emplace in path
-							std::cout<<"^-^ emplace: "<<wtemp<<", "<<secndWd<<std::endl;
 							wrdQueue.push(wtemp);					// and push wtemp back onto wordqueue
 							break;	
 						}
 						else if ( wtemp[numCharAdj] == secndWd[numCharAdj] && check == 1 ) {
 							path.emplace(wtemp, secndWd);
-							std::cout<<"@  emplace: "<<wtemp<<", "<<secndWd<<std::endl;
 							wrdQueue.push(wtemp);
 							adjChar.push(numCharAdj);
 						}
@@ -119,7 +116,6 @@ wrdQueue.push(s1);
 			}
 			if(wrdQueue.front() != secndWd && check==1){ 
 				path.emplace(wrdQueue.front(), secndWd);
-				std::cout<<"## emplace: "<<wrdQueue.front()<<", "<< secndWd<<std::endl;
 			}
 		}	// not currently in path
 	}	// end while !adjChar.isEmpty()
@@ -133,44 +129,35 @@ wrdQueue.push(s1);
 		count = 0;
 		int check = 0;
 		std::string beforeVal = path.at(append);	// beforeVal = value before append / 2 left from temp
-		std::cout<<"curWord: "<<curWord<< ", append: "<<append<<", and beforeVal: "<<beforeVal<<std::endl;
 
-		if(!stk.empty()){std::cout<<"stk.top(): "<<stk.top()<<std::endl;}
-		else if ( append == s1) {
+		if ( append == s1) {
 			stk.push(curWord);
 			break;
 		}
 		for( int i = 0; i < s2.length(); i++) {
-			if ( curWord[i] != beforeVal[i] ) {
+			if ( curWord[i] != beforeVal[i] ) {	//checks if we can skip inbetween word
 				count++;
 			}
-			if(append == s1 && stk.top()[i] != s1[i]) {
-				std::cout<<"s1 check"<<std::endl;
+			if(append == s1 && stk.top()[i] != s1[i]) {	// check to see if we can skip current word because stk.top is directly before s1
 				check++;
 			}
-			else if( !stk.empty() && curWord[i] != stk.top()[i]) {
+			else if( !stk.empty() && curWord[i] != stk.top()[i]) {	// current word has only 1 char different from stk.top
 				check++;
 			}
-		}
+		}	// end char comparison  ||  count and check
 
-	std::cout<<"count: "<<count <<std::endl;
-	if(append == s1) {
-		std::cout<<"!!!!!!!!!!!! append == s1"<<std::endl;
-	}
-if(!stk.empty()){	std::cout<<"check: "<<check<<std::endl;	}
-		if ( append == s1 && check == 1) {
-			std::cout<<"s1 break;"<<std::endl;
+		// starting to push to stk for solution
+		// if append == s1
+		if ( append == s1 && check == 1) {	// can skip adding current word to stk
 			break;
 		}
-		else if (append == s1) {
+		else if (append == s1) {	// add current word to stk
 			stk.push(curWord);
-			std::cout<<"s1 push then break;\n"<<std::endl;
 			break;
 		}
-		if ( count == 1 && check == 1 ) {
-			std::cout<<"stk(curWord) curWord = beforeVal"<<std::endl;
+		// if append != s1
+		if ( count == 1 && check == 1 ) {	// can skip inbetween word(s)
 			stk.push(curWord);
-			std::cout<<"curWord: "<<curWord<<std::endl;
 			while(check<=1) {
 				check = 0;
 				for(int t = 0; t<s1.length(); t++){
@@ -182,23 +169,20 @@ if(!stk.empty()){	std::cout<<"check: "<<check<<std::endl;	}
 					break;
 				}
 				curWord = path.at(curWord);
-				std::cout<<"while loop"<<std::endl;
 			}
 			curWord = beforeVal;
 		}
-		else if (check >1) {
+		else if (check >1) {	// not time to add to stk just yet
 			curWord = append;
 		}
-		else {
-			std::cout<<"push: "<<curWord<<std::endl;
+		else {	// add current word to stk and change current word to the word previous to it
 			stk.push(curWord);
 			curWord = append;
 		}
 	}
-	stk.push(s1);
-std::cout<<"\n******\nThis is the size of the solution: "<<stk.size()<<std::endl;
-	solution += s1;
-	stk.pop();
+	stk.push(s1);	// add s1 to stack
+	solution += s1;	// s1 added to solution
+	stk.pop();	// pop s1 from stack.
 	// put the words in the stack in the solution string for return
 	while (!stk.empty()) {
 		solution += " --> " + stk.top();
