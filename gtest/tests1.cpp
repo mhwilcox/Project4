@@ -102,8 +102,15 @@ TEST(ConvertWords, AntToEat)
 }
 
 
+TEST(MorgansTest, HeadToTail)
+{
+	WordSet words;
+	std::ifstream in("words.txt");
+	loadWordsIntoTable(words, in);
 
+ 	std::string r = convert("head", "tail", words);
+ 	EXPECT_TRUE(r == "head --> heal --> teal --> tell --> tall --> tail");
 
-
+ }
 
 }

@@ -34,7 +34,6 @@ std::string convert(std::string s1, std::string s2, const WordSet & words)
 	std::queue<int> adjChar;
 	std::map<std::string, std::string> path;
 
-	std::string temp = s2;
 	std::string append;
 	std::stack<std::string> stk;
 
@@ -42,125 +41,176 @@ std::string convert(std::string s1, std::string s2, const WordSet & words)
 
 	path.emplace(s1,"");
 
-
-	std::cout<<"size of adjChar: "<<adjChar.size()<<std::endl;
-	std::cout<<"size of path: "<<path.size()<<std::endl;
-	std::cout<<"side of stk: "<<stk.size()<<std::endl;
-
-std::cout<<"solution at beginning of convert:: "<<solution<<std::endl;
-
 	// compare strings
-	std::cout<<"s1: "<<s1 <<" s2: "<<s2 <<std::endl;
 	for(int i = s1.length()-1; i >= 0; i--) {
 		if( s1[i] == s2[i]) {
-			std::cout<<"s1: "<< s1 << " and s2: " << s2 << " share a char at: "<< i << std::endl;
 		}
 		else {
-			std::cout<<"\n    char doesn't match at: "<<i<<" pushing to adjChar. "<< std::endl;
 			adjChar.push(i);
 		}
 	}
 
 wrdQueue.push(s1);
-
 	std::string wtemp = wrdQueue.front();
 
-	while(wtemp != s2) {
+	while(wtemp != s2) {	// wtemp != s2
 		int numCharAdj = adjChar.front();
+		std::string secndWd = wrdQueue.front();
 		wtemp = wrdQueue.front();
+		wrdQueue.pop();
 		// what I want to do is cycle through to see if s2 shows up and if it doesn't then check to see if 
 		//   the cycle contains any real words and try them. 
 			for ( int w = 0 ; w < 26 ; w++) {
 				wtemp[numCharAdj] = 'a' + w;
-				if(path.find(wtemp) != path.end()) { 
+				
+				if(path.find(wtemp) != path.end()) {
 				}
-				else if (wtemp == s2) {
-					path.emplace(wtemp, wrdQueue.front());
+				else if (wtemp == s2) {	// if wtemp == s2 then put in in path and break from the loop;
+					path.emplace(wtemp, secndWd);
+					std::cout<<"!!!****!!!  emplace: "<<wtemp<<", "<<secndWd<<std::endl;
 					wrdQueue.push(wtemp);
-					wrdQueue.pop();
 					break;
 				}
-				else if (words.contains(wtemp)) { 
-					if (wtemp[numCharAdj] == s2[numCharAdj]) {
-						path.emplace(wtemp, wrdQueue.front());
-						wrdQueue.push(wtemp);
-						break;	
-					}
-					else {
-						wrdQueue.push(wtemp);
-					}
+				else if (words.contains(wtemp)) { 	// if wtemp is a word enter codeblock
+					int check = 0;
 					
+						for(int i = 0; i<s2.length(); i++){
+							if(wtemp[i]!=secndWd[i]){
+								check++;
+							}
+						}
+
+						if (wtemp[numCharAdj] == s2[numCharAdj] && check == 1 ) {	// if wtemp has a char match with s2
+							path.emplace(wtemp, secndWd);	//	emplace in path
+							std::cout<<"^-^ emplace: "<<wtemp<<", "<<secndWd<<std::endl;
+							wrdQueue.push(wtemp);					// and push wtemp back onto wordqueue
+							break;	
+						}
+						else if ( wtemp[numCharAdj] == secndWd[numCharAdj] && check == 1 ) {
+							path.emplace(wtemp, secndWd);
+							std::cout<<"@  emplace: "<<wtemp<<", "<<secndWd<<std::endl;
+							wrdQueue.push(wtemp);
+							adjChar.push(numCharAdj);
+						}
+						else if ( check == 1){
+							wrdQueue.push(wtemp);
+						}
+								
 				}	// end if an actual word
 				else if (w==25) {
 					adjChar.push(numCharAdj);
-					wrdQueue.push(wrdQueue.front());
+					wrdQueue.push(secndWd);
+					break;
 				}
 			}	// end for loop
+
 	if(wtemp == s2){
-		std::cout<<"s2 acheived. break"<<std::endl;
 		break;
 	}
 		adjChar.pop();
-		std::string val=wrdQueue.front();
-
-		wrdQueue.pop();
-		// val is previous and wrdQueue.front() is the current word
-		
-		path.emplace(wrdQueue.front(), val);
-
+		adjChar.push(numCharAdj);
+		wrdQueue.push(secndWd);
+		if(path.find(wtemp) == path.end()) {
+			int check = 0;
+			for(int i = 0; i<s2.length(); i++){
+				if(wrdQueue.front()[i]!=secndWd[i]){
+					check++;
+				}
+			}
+			if(wrdQueue.front() != secndWd && check==1){ 
+				path.emplace(wrdQueue.front(), secndWd);
+				std::cout<<"## emplace: "<<wrdQueue.front()<<", "<< secndWd<<std::endl;
+			}
+		}	// not currently in path
 	}	// end while !adjChar.isEmpty()
 	
-	stk.push(temp);
 
-	while(path.at(temp) != s1) {	// 
-		append = path.at(temp);
+
+		std::string curWord = s2;
+	// create stack for solution set
+	while(curWord != s1) {	// curWord = furthest right value *starts at s2
+		append = path.at(curWord);		// append = value right before temp
 		count = 0;
-		std::string beforeVal = path.at(append);
-		std::string curWord = wrdQueue.front();
-		std::cout<<"trying to fix emplacemtn. wrdQueue.front(): "<<curWord<<" and path.at(val): "<<beforeVal<<std::endl;
+		int check = 0;
+		std::string beforeVal = path.at(append);	// beforeVal = value before append / 2 left from temp
+		std::cout<<"curWord: "<<curWord<< ", append: "<<append<<", and beforeVal: "<<beforeVal<<std::endl;
+
+		if(!stk.empty()){std::cout<<"stk.top(): "<<stk.top()<<std::endl;}
+		else if ( append == s1) {
+			stk.push(curWord);
+			break;
+		}
 		for( int i = 0; i < s2.length(); i++) {
 			if ( curWord[i] != beforeVal[i] ) {
 				count++;
 			}
-			
-		}
-		std::cout<<"this is temp: "<<temp <<" this is what's before temp: "<<path.at(temp)
-			<<" and this is what's before that: "<<path.at(append)<<std::endl;
-
-		if ( count == 1 ) {
-			std::cout<<"count == 1"<<std::endl;
-			if(path.at(append) == s1) {
-				std::cout<<"path.at(append)==s1  break!"<<std::endl;
-				break;
+			if(append == s1 && stk.top()[i] != s1[i]) {
+				std::cout<<"s1 check"<<std::endl;
+				check++;
 			}
-			temp = path.at(append);	
+			else if( !stk.empty() && curWord[i] != stk.top()[i]) {
+				check++;
+			}
 		}
-		std::cout<<"add append to stack. \n"<<std::endl;
-		stk.push(append);
-		temp = append;
-		
+
+	std::cout<<"count: "<<count <<std::endl;
+	if(append == s1) {
+		std::cout<<"!!!!!!!!!!!! append == s1"<<std::endl;
+	}
+if(!stk.empty()){	std::cout<<"check: "<<check<<std::endl;	}
+		if ( append == s1 && check == 1) {
+			std::cout<<"s1 break;"<<std::endl;
+			break;
+		}
+		else if (append == s1) {
+			stk.push(curWord);
+			std::cout<<"s1 push then break;\n"<<std::endl;
+			break;
+		}
+		if ( count == 1 && check == 1 ) {
+			std::cout<<"stk(curWord) curWord = beforeVal"<<std::endl;
+			stk.push(curWord);
+			std::cout<<"curWord: "<<curWord<<std::endl;
+			while(check<=1) {
+				check = 0;
+				for(int t = 0; t<s1.length(); t++){
+					if(curWord[t] != path.at(curWord)[t]) {
+						check++;
+					}
+				}
+				if(check==2) {
+					break;
+				}
+				curWord = path.at(curWord);
+				std::cout<<"while loop"<<std::endl;
+			}
+			curWord = beforeVal;
+		}
+		else if (check >1) {
+			curWord = append;
+		}
+		else {
+			std::cout<<"push: "<<curWord<<std::endl;
+			stk.push(curWord);
+			curWord = append;
+		}
 	}
 	stk.push(s1);
-
+std::cout<<"\n******\nThis is the size of the solution: "<<stk.size()<<std::endl;
 	solution += s1;
 	stk.pop();
-
+	// put the words in the stack in the solution string for return
 	while (!stk.empty()) {
 		solution += " --> " + stk.top();
-		std::cout<<"adding to solution: "<<stk.top()<<std::endl;
-		stk.pop();
-		
+		stk.pop();		
 	}
+
 	while(!wrdQueue.empty()) {
 		wrdQueue.pop();
 	}
-	std::cout<<"stk size: "<<stk.size()<<std::endl;
-
-		std::cout<<"\n**********-------------************: "<<solution<<std::endl;
-		std::cout<<"clearing map, queue, & stack.\n"<<std::endl;
-
+	
 		path.clear();
-
+std::cout<<"solution:  "<<solution<<std::endl;
 	return solution;  // return solution
 }
 

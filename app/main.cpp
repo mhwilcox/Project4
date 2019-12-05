@@ -10,17 +10,17 @@
 
 int main()
 {
-	std::cout<<"second words test. "<<std::endl;
+	std::cout<<"head to tail test. "<<std::endl;
 	WordSet words;
 	std::ifstream in("words.txt");
 	loadWordsIntoTable(words, in);
 
- 	std::string r = convert("ant", "eat", words);
- 	if( r == "ant --> aft -> oft --> oat --> eat") {
+ 	std::string r = convert("head", "tail", words);
+ 	if( r == "head --> heal --> teal --> tell --> tall --> tail") {
  		std::cout<<"TRUE!!!!!!!!!!"<<std::endl;
  	}
 
- 	std::cout<<"return of 'ant to eat': "<<r<<std::endl;
+ 	std::cout<<"\n*******\n*******\nreturn of 'head' to 'tail': \t"<<r<<std::endl;
 
     return 0;
 }

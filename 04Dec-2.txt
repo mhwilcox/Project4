@@ -1,0 +1,131 @@
+[==========] Running 8 tests from 6 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from HashFunctionTest
+[ RUN      ] HashFunctionTest.Hf1
+[       OK ] HashFunctionTest.Hf1 (0 ms)
+[----------] 1 test from HashFunctionTest (0 ms total)
+
+[----------] 1 test from TableTest
+[ RUN      ] TableTest.Tab1
+[       OK ] TableTest.Tab1 (0 ms)
+[----------] 1 test from TableTest (0 ms total)
+
+[----------] 2 tests from ResizeTest
+[ RUN      ] ResizeTest.Tab2
+[       OK ] ResizeTest.Tab2 (0 ms)
+[ RUN      ] ResizeTest.Tab3
+[       OK ] ResizeTest.Tab3 (0 ms)
+[----------] 2 tests from ResizeTest (0 ms total)
+
+[----------] 1 test from SampleTest
+[ RUN      ] SampleTest.Abandoning
+[       OK ] SampleTest.Abandoning (0 ms)
+[----------] 1 test from SampleTest (0 ms total)
+
+[----------] 2 tests from ConvertWords
+[ RUN      ] ConvertWords.AntToArt
+!!!****!!!  emplace: art, ant
+curWord: art, append: ant, and beforeVal: 
+
+******
+This is the size of the solution: 2
+solution:  ant --> art
+[       OK ] ConvertWords.AntToArt (86 ms)
+[ RUN      ] ConvertWords.AntToEat
+## emplace: act, ant
+## emplace: aft, act
+## emplace: apt, aft
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: apt, act
+## emplace: art, apt
+## emplace: aft, art
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+^-^ emplace: oat, opt
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: aft, oft
+## emplace: apt, opt
+## emplace: opt, apt
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+!!!****!!!  emplace: eat, oat
+curWord: eat, append: oat, and beforeVal: opt
+count: 2
+push: eat
+curWord: oat, append: opt, and beforeVal: apt
+stk.top(): eat
+count: 2
+check: 1
+push: oat
+curWord: opt, append: apt, and beforeVal: aft
+stk.top(): oat
+count: 2
+check: 1
+push: opt
+curWord: apt, append: aft, and beforeVal: act
+stk.top(): opt
+count: 1
+check: 1
+stk(curWord) curWord = beforeVal
+curWord: apt
+while loop
+while loop
+while loop
+while loop
+curWord: act, append: ant, and beforeVal: 
+stk.top(): apt
+s1 check
+count: 3
+!!!!!!!!!!!! append == s1
+check: 1
+
+******
+This is the size of the solution: 5
+solution:  ant --> apt --> opt --> oat --> eat
+/home/ics46b/projects/proj4/gtest/tests1.cpp:98: Failure
+Value of: r == "ant --> aft --> oft --> oat --> eat"
+  Actual: false
+Expected: true
+[  FAILED  ] ConvertWords.AntToEat (76 ms)
+[----------] 2 tests from ConvertWords (162 ms total)
+
+[----------] 1 test from MorgansTest
+[ RUN      ] MorgansTest.HeadToTail
+^-^ emplace: heal, head
+## emplace: heal, head
+## emplace: head, heal
+## emplace: hell, heel
+## emplace: heal, hell
+^-^ emplace: teal, heal
+## emplace: head, heal
+## emplace: keel, feel
+## emplace: peel, keel
+## emplace: reel, peel
+## emplace: heel, reel
+## emplace: hell, heel
+^-^ emplace: hall, hell
+## emplace: heal, hell
+## emplace: deal, heal
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: teal, seal
+## emplace: heal, teal
+## emplace: held, heed
+## emplace: herd, held
+## emplace: head, herd
+## emplace: feel, fell
+## emplace: keel, feel
+## emplace: peel, peal
+## emplace: reel, peel
+## emplace: heel, reel
+^-^ emplace: hail, hall
+## emplace: hell, hall

@@ -34904,6 +34904,7 @@ teaches
 teaching
 teachings
 teacup
+teal
 team
 teamed
 teaming

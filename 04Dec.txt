@@ -1,4 +1,4 @@
-[==========] Running 7 tests from 5 test cases.
+[==========] Running 8 tests from 6 test cases.
 [----------] Global test environment set-up.
 [----------] 1 test from HashFunctionTest
 [ RUN      ] HashFunctionTest.Hf1
@@ -14,8 +14,8 @@
 [ RUN      ] ResizeTest.Tab2
 [       OK ] ResizeTest.Tab2 (0 ms)
 [ RUN      ] ResizeTest.Tab3
-[       OK ] ResizeTest.Tab3 (1 ms)
-[----------] 2 tests from ResizeTest (1 ms total)
+[       OK ] ResizeTest.Tab3 (0 ms)
+[----------] 2 tests from ResizeTest (0 ms total)
 
 [----------] 1 test from SampleTest
 [ RUN      ] SampleTest.Abandoning
@@ -24,74 +24,1001 @@
 
 [----------] 2 tests from ConvertWords
 [ RUN      ] ConvertWords.AntToArt
-size of adjChar: 0
-size of path: 1
-side of stk: 0
-solution at beginning of convert:: 
-s1: ant s2: art
-s1: ant and s2: art share a char at: 2
+!!!****!!!  emplace: art, ant
+curWord: art, append: ant, and beforeVal: 
 
-    char doesn't match at: 1 pushing to adjChar. 
-s1: ant and s2: art share a char at: 0
-s2 acheived. break
-adding to solution: art
-stk size: 0
-
-**********-------------************: ant --> art
-clearing map, queue, & stack.
-
-[       OK ] ConvertWords.AntToArt (220 ms)
+******
+This is the size of the solution: 2
+solution:  ant --> art
+[       OK ] ConvertWords.AntToArt (81 ms)
 [ RUN      ] ConvertWords.AntToEat
-size of adjChar: 0
-size of path: 1
-side of stk: 0
-solution at beginning of convert:: 
-s1: ant s2: eat
-s1: ant and s2: eat share a char at: 2
+## emplace: act, ant
+## emplace: aft, act
+## emplace: apt, aft
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: apt, act
+## emplace: art, apt
+## emplace: aft, art
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: apt, act
+## emplace: art, apt
+^-^ emplace: oat, oft
+## emplace: oft, aft
+## emplace: aft, oft
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: apt, opt
+## emplace: opt, apt
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: oft, oat
+## emplace: aft, oft
+## emplace: out, opt
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: oat, out
+## emplace: out, oat
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: opt, out
+## emplace: out, opt
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: oat, out
+## emplace: out, oat
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: opt, out
+## emplace: out, opt
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: oat, out
+## emplace: out, oat
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: opt, out
+## emplace: out, opt
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: oat, out
+## emplace: out, oat
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: opt, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: cut, out
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: but, rut
+## emplace: gut, but
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: cut, rut
+## emplace: hut, cut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: gut, rut
+## emplace: jut, gut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: hut, rut
+## emplace: nut, hut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: jut, rut
+## emplace: put, jut
+## emplace: rut, put
+## emplace: nut, rut
+## emplace: rut, nut
+## emplace: put, rut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: but, out
+## emplace: cut, but
+## emplace: gut, cut
+## emplace: hut, gut
+## emplace: jut, hut
+## emplace: nut, jut
+## emplace: put, nut
+## emplace: rut, put
+## emplace: out, rut
+## emplace: oft, out
+## emplace: aft, oft
+## emplace: art, aft
+## emplace: apt, art
+## emplace: art, apt
+## emplace: ant, art
+## emplace: act, ant
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: opt, out
+## emplace: apt, opt
+## emplace: art, apt
+## emplace: oat, out
+!!!****!!!  emplace: eat, oat
+curWord: eat, append: oat, and beforeVal: oft
+count: 2
+push: eat
+curWord: oat, append: oft, and beforeVal: aft
+stk.top(): eat
+count: 2
+check: 1
+push: oat
+curWord: oft, append: aft, and beforeVal: act
+stk.top(): oat
+count: 2
+check: 1
+push: oft
+curWord: aft, append: act, and beforeVal: ant
+stk.top(): oft
+count: 1
+check: 1
+stk(curWord) curWord = beforeVal
+curWord: aft
+while loop
+while loop
+while loop
 
-    char doesn't match at: 1 pushing to adjChar. 
+******
+This is the size of the solution: 5
+solution:  ant --> aft --> oft --> oat --> eat
+[       OK ] ConvertWords.AntToEat (139 ms)
+[----------] 2 tests from ConvertWords (220 ms total)
 
-    char doesn't match at: 0 pushing to adjChar. 
-s2 acheived. break
-trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): opt
-this is temp: eat this is what's before temp: oat and this is what's before that: opt
-count == 1
-add append to stack. 
+[----------] 1 test from MorgansTest
+[ RUN      ] MorgansTest.HeadToTail
+^-^ emplace: heal, head
+## emplace: head, heal
+## emplace: hell, heel
+## emplace: heal, hell
+## emplace: head, heal
+## emplace: keel, feel
+## emplace: peel, keel
+## emplace: reel, peel
+## emplace: heel, reel
+## emplace: helm, held
+## emplace: help, helm
+## emplace: hell, help
+^-^ emplace: hall, hell
+## emplace: heel, hell
+## emplace: heal, heel
+^-^ emplace: teal, heal
+## emplace: heel, heal
+## emplace: heal, heel
+## emplace: head, heal
+## emplace: keel, heel
+## emplace: peel, keel
+## emplace: reel, peel
+## emplace: feel, reel
+## emplace: heel, feel
+## emplace: peel, heel
+## emplace: reel, peel
+## emplace: keel, reel
+## emplace: peep, peek
+## emplace: peer, peep
+## emplace: peel, peer
+## emplace: reef, reed
+## emplace: reel, reef
+## emplace: heel, reel
+## emplace: heed, heel
+## emplace: herd, heed
+## emplace: held, herd
+## emplace: helm, held
+## emplace: help, helm
+^-^ emplace: hail, hall
+## emplace: hill, hell
+## emplace: hull, hill
+## emplace: hell, hull
+## emplace: heel, hell
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: teal, seal
+## emplace: heal, teal
+## emplace: deal, heal
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: veal, seal
+## emplace: zeal, veal
+## emplace: heal, zeal
+## emplace: heel, feel
+## emplace: hear, heap
+## emplace: heat, hear
+## emplace: heal, heat
+## emplace: heap, heal
+## emplace: hear, heap
+## emplace: heat, hear
+## emplace: head, heat
+## emplace: heap, head
+## emplace: hear, heap
+## emplace: heat, hear
+## emplace: head, heat
+## emplace: heap, head
+## emplace: hear, heap
+^-^ emplace: heir, hear
+## emplace: head, heat
+## emplace: heed, head
+## emplace: held, heed
+## emplace: herd, held
+## emplace: head, herd
+## emplace: keel, heel
+## emplace: peel, peal
+## emplace: reel, real
+## emplace: feel, fell
+## emplace: fell, feel
+## emplace: feel, fell
+## emplace: fell, feel
+## emplace: feel, fell
+## emplace: heel, feel
+## emplace: peel, heel
+## emplace: reel, peel
+## emplace: keel, reel
+## emplace: peep, prep
+## emplace: deer, beer
+## emplace: jeer, deer
+## emplace: leer, jeer
+## emplace: seer, leer
+## emplace: veer, seer
+## emplace: peer, veer
+## emplace: peel, peer
+## emplace: feed, deed
+## emplace: heed, feed
+## emplace: need, heed
+## emplace: seed, need
+## emplace: weed, seed
+## emplace: reed, weed
+## emplace: reef, beef
+## emplace: reed, reef
+## emplace: reel, reed
+## emplace: reed, reel
+## emplace: reel, reed
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: here, herb
+## emplace: hero, here
+## emplace: hers, hero
+## emplace: herd, hers
+## emplace: held, herd
+## emplace: helm, held
+## emplace: hemp, heap
+## emplace: help, hemp
+## emplace: heap, help
+## emplace: hemp, heap
+## emplace: help, hemp
+## emplace: hall, hail
+## emplace: hell, hall
+## emplace: hill, hell
+## emplace: hull, hurl
+## emplace: hell, hull
+## emplace: heel, hell
+## emplace: deal, dell
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: teal, seal
+## emplace: heal, teal
+## emplace: dual, dial
+## emplace: deal, dual
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: veal, vial
+^-^ emplace: veil, veal
+## emplace: zeal, veal
+## emplace: heal, zeal
+## emplace: feel, fuel
+## emplace: heel, feel
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: veal, seal
+## emplace: zeal, veal
+## emplace: heal, zeal
+## emplace: hear, heal
+## emplace: heat, hear
+## emplace: heap, heat
+## emplace: heat, heap
+## emplace: hear, heat
+## emplace: heap, hear
+## emplace: heat, heap
+## emplace: heap, heat
+## emplace: heal, heap
+## emplace: heap, heal
+## emplace: heal, heap
+## emplace: heap, heal
+## emplace: hear, heap
+## emplace: heat, hear
+## emplace: head, heat
+## emplace: heap, head
+## emplace: hear, heap
+## emplace: heat, hear
+## emplace: head, heat
+## emplace: heap, head
+^-^ emplace: hair, heir
+## emplace: heat, hent
+## emplace: head, heat
+## emplace: heed, head
+## emplace: held, heed
+## emplace: herd, held
+## emplace: head, herd
+## emplace: keel, heel
+## emplace: reel, real
+## emplace: feel, fell
+## emplace: fell, feel
+## emplace: feel, fell
+## emplace: fell, feel
+## emplace: feel, fell
+## emplace: fell, feel
+## emplace: feel, fell
+## emplace: heel, feel
+## emplace: peel, heel
+## emplace: reel, peel
+## emplace: keel, reel
+## emplace: peep, prep
+## emplace: prep, peep
+## emplace: peep, prep
+## emplace: beer, bier
+## emplace: dyer, doer
+## emplace: deer, dyer
+## emplace: jeer, deer
+## emplace: leer, jeer
+## emplace: seer, leer
+## emplace: veer, vier
+## emplace: peer, pier
+## emplace: pier, peer
+## emplace: peer, pier
+## emplace: peel, peer
+## emplace: dyed, died
+## emplace: deed, dyed
+## emplace: feed, fled
+## emplace: heed, feed
+## emplace: need, heed
+## emplace: deed, need
+## emplace: reed, deed
+## emplace: weed, reed
+## emplace: seed, weed
+## emplace: deed, seed
+## emplace: reed, deed
+## emplace: weed, reed
+## emplace: deed, weed
+## emplace: reed, deed
+## emplace: deed, reed
+## emplace: reed, deed
+## emplace: reef, beef
+## emplace: beef, reef
+## emplace: reef, beef
+## emplace: reed, deed
+## emplace: reel, reed
+## emplace: reed, deed
+## emplace: reel, reed
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: hero, here
+## emplace: hers, hero
+## emplace: herb, hers
+## emplace: hero, herb
+## emplace: hers, hero
+## emplace: here, hers
+## emplace: herb, here
+## emplace: hers, herb
+## emplace: hero, hers
+## emplace: herb, hero
+## emplace: hers, herb
+## emplace: herb, hers
+## emplace: herd, herb
+^-^ emplace: hard, herd
+## emplace: herd, herb
+## emplace: held, herd
+## emplace: helm, held
+^-^ emplace: hams, hems
+## emplace: help, hemp
+## emplace: heap, help
+## emplace: hemp, heap
+## emplace: help, hemp
+## emplace: hail, haul
+## emplace: haul, hail
+## emplace: hall, haul
+## emplace: hell, hall
+## emplace: hill, hell
+## emplace: hull, hurl
+## emplace: hurl, hull
+## emplace: hull, hurl
+## emplace: hell, hull
+## emplace: heel, hell
+## emplace: deal, dell
+## emplace: dell, deal
+## emplace: deal, dell
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, sell
+## emplace: sell, seal
+## emplace: seal, sell
+^-^ emplace: tall, tell
+## emplace: tell, teal
+## emplace: teal, tell
+## emplace: heal, teal
+^-^ emplace: till, dill
+## emplace: dull, duel
+## emplace: dual, dull
+## emplace: deal, dell
+## emplace: deal, dell
+## emplace: seal, sell
+## emplace: seal, sell
+## emplace: veal, veil
+## emplace: fuel, full
+## emplace: feel, fuel
+## emplace: heel, feel
+## emplace: deal, dial
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: seal, real
+## emplace: veal, vial
+## emplace: zeal, veal
+## emplace: heal, zeal
+## emplace: hear, hoar
+## emplace: heat, hear
+## emplace: heap, heat
+## emplace: heat, heap
+## emplace: hear, hoar
+## emplace: hoar, hear
+## emplace: hear, hoar
+## emplace: heap, hear
+## emplace: heat, heap
+## emplace: heap, heat
+## emplace: heal, heap
+## emplace: heap, heal
+## emplace: heal, heap
+## emplace: heap, heal
+## emplace: hear, hoar
+## emplace: hoar, hear
+## emplace: hear, hoar
+## emplace: heat, hear
+## emplace: head, heat
+## emplace: heap, head
+## emplace: hear, hoar
+## emplace: hoar, hear
+## emplace: hear, hoar
+## emplace: heat, hear
+## emplace: head, heat
+## emplace: heap, head
+## emplace: heir, hair
+## emplace: hear, hoar
+## emplace: hunt, hint
+## emplace: hent, hunt
+## emplace: heat, hent
+## emplace: head, heat
+## emplace: bead, head
+## emplace: dead, bead
+## emplace: lead, dead
+## emplace: mead, lead
+## emplace: read, mead
+## emplace: head, read
+## emplace: bead, head
+## emplace: dead, bead
+## emplace: lead, dead
+## emplace: mead, lead
+## emplace: read, mead
+## emplace: head, read
+## emplace: heed, deed
+## emplace: deed, heed
+## emplace: heed, deed
+## emplace: weld, geld
+## emplace: held, weld
+## emplace: geld, held
+## emplace: weld, geld
+## emplace: held, weld
+## emplace: herd, held
+## emplace: dead, bead
+## emplace: lead, dead
+## emplace: mead, lead
+## emplace: read, mead
+## emplace: head, read
+## emplace: bead, head
+## emplace: dead, bead
+## emplace: lead, dead
+## emplace: mead, lead
+## emplace: read, mead
+## emplace: head, read
+## emplace: bead, head
+## emplace: dead, bead
+## emplace: lead, dead
+## emplace: mead, lead
+## emplace: read, mead
+## emplace: head, read
+## emplace: bead, head
+## emplace: dead, bead
+## emplace: lead, dead
+## emplace: mead, lead
+## emplace: read, mead
+## emplace: head, read
+## emplace: keel, heel
+## emplace: peel, peal
+## emplace: peek, peel
+## emplace: peel, peek
+## emplace: peek, peel
+## emplace: peel, peek
+## emplace: ream, read
+## emplace: reap, ream
+## emplace: rear, reap
+## emplace: real, rear
+## emplace: read, real
+## emplace: ream, read
+## emplace: reap, ream
+## emplace: rear, reap
+## emplace: real, rear
+## emplace: reel, real
+## emplace: fell, felt
+## emplace: felt, fell
+## emplace: fell, felt
+## emplace: felt, fell
+## emplace: fell, felt
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fell, felt
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fell, felt
+## emplace: felt, fell
+## emplace: fell, felt
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fell, felt
+## emplace: felt, fell
+## emplace: fell, felt
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: fees, feel
+## emplace: feet, fees
+## emplace: feel, feet
+## emplace: heel, feel
+## emplace: peel, peek
+## emplace: peek, peel
+## emplace: peel, peek
+## emplace: peek, peel
+## emplace: peel, peek
+## emplace: peek, peel
+## emplace: peel, peek
+## emplace: reel, peel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: keen, keel
+## emplace: keep, keen
+## emplace: keel, keep
+## emplace: prep, prey
+## emplace: prey, prep
+## emplace: prep, prey
+## emplace: prey, prep
+## emplace: prep, prey
+## emplace: peep, peek
+## emplace: peek, peep
+## emplace: peep, peek
+## emplace: prep, prey
+## emplace: peep, peek
+## emplace: peek, peep
+## emplace: peep, peek
+## emplace: been, beef
+## emplace: beep, been
+## emplace: bees, beep
+## emplace: beet, bees
+## emplace: beer, beet
+## emplace: beef, beer
+## emplace: been, beef
+## emplace: beep, been
+## emplace: bees, beep
+## emplace: beet, bees
+## emplace: beer, beet
+## emplace: doer, does
+## emplace: dyer, doer
+## emplace: deer, dear
+## emplace: dear, deer
+## emplace: deer, dear
+## emplace: jeer, deer
+## emplace: leer, jeer
+## emplace: seer, sear
+## emplace: sear, seer
+## emplace: seer, sear
+## emplace: veer, vier
+## emplace: peer, pear
+## emplace: pear, peer
+## emplace: peer, pear
+## emplace: pier, peer
+## emplace: peer, pear
+## emplace: pear, peer
+## emplace: peer, pear
+## emplace: peel, peer
+## emplace: dyed, dyad
+## emplace: deed, dead
+## emplace: dead, deed
+## emplace: deed, dead
+## emplace: feud, fend
+## emplace: feed, feud
+## emplace: fend, feed
+## emplace: feud, fend
+## emplace: feed, feud
+## emplace: heed, feed
+## emplace: need, heed
+## emplace: deed, dead
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: weed, weld
+^-^ emplace: sand, send
+## emplace: send, seed
+## emplace: seed, send
+## emplace: deed, dead
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: weed, weld
+## emplace: weld, weed
+## emplace: weed, weld
+## emplace: deed, dead
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: read, reed
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: deed, dead
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: read, reed
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: reef, beef
+## emplace: beef, reef
+## emplace: reef, beef
+## emplace: deed, dead
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: read, reed
+## emplace: rend, read
+^-^ emplace: tend, rend
+## emplace: reel, reed
+## emplace: deed, dead
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: read, reed
+## emplace: rend, read
+## emplace: reed, rend
+## emplace: reel, reed
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: heel, heed
+## emplace: heed, heel
+## emplace: hero, here
+## emplace: hens, hems
+## emplace: hews, hens
+## emplace: hers, hews
+## emplace: herb, hers
+## emplace: hero, herb
+## emplace: hens, hems
+## emplace: hews, hens
+## emplace: hers, hews
+## emplace: here, hers
+## emplace: herb, here
+## emplace: hens, hems
+## emplace: hews, hens
+## emplace: hers, hews
+## emplace: hero, hers
+## emplace: herb, hero
+## emplace: hens, hems
+## emplace: hews, hens
+## emplace: hers, hews
+## emplace: hems, hers
+## emplace: hens, hems
+## emplace: hews, hens
+## emplace: hers, hews
+## emplace: herb, hers
+## emplace: herd, herb
+## emplace: hard, herd
+## emplace: herd, hard
+## emplace: herb, herd
+## emplace: herd, herb
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: hold, held
+## emplace: held, hold
+## emplace: helm, held
+## emplace: hems, hams
+## emplace: hemp, hump
+## emplace: hump, hemp
+## emplace: hemp, hump
+## emplace: help, hemp
+## emplace: heap, help
+## emplace: hemp, hump
+## emplace: hump, hemp
+## emplace: hemp, hump
+## emplace: help, hemp
+## emplace: hail, haul
+## emplace: haul, hail
+## emplace: hall, haul
+## emplace: hell, hall
+## emplace: hill, hell
+## emplace: hull, hurl
+## emplace: hurl, hull
+## emplace: hull, hurl
+## emplace: hell, hull
+## emplace: heel, hell
+## emplace: doll, dill
+## emplace: dull, doll
+## emplace: dell, dull
+## emplace: dill, dell
+## emplace: doll, dill
+## emplace: dull, doll
+## emplace: dell, dull
+## emplace: dill, dell
+## emplace: doll, dill
+## emplace: dull, doll
+## emplace: dell, dull
+## emplace: deal, dial
+## emplace: dial, deal
+## emplace: deal, dial
+## emplace: doll, dill
+## emplace: dull, doll
+## emplace: dell, dull
+## emplace: deal, dial
+## emplace: dial, deal
+## emplace: deal, dial
+## emplace: meal, deal
+## emplace: peal, meal
+## emplace: real, peal
+## emplace: sell, sill
+## emplace: seal, sell
+## emplace: sell, sill
+## emplace: seal, sell
+!!!****!!!  emplace: tail, tall
+curWord: tail, append: tall, and beforeVal: tell
+count: 2
+push: tail
+curWord: tall, append: tell, and beforeVal: teal
+stk.top(): tail
+count: 2
+check: 1
+push: tall
+curWord: tell, append: teal, and beforeVal: heal
+stk.top(): tall
+count: 2
+check: 1
+push: tell
+curWord: teal, append: heal, and beforeVal: head
+stk.top(): tell
+count: 2
+check: 1
+push: teal
+curWord: heal, append: head, and beforeVal: 
+stk.top(): teal
+s1 check
+s1 check
+count: 4
+!!!!!!!!!!!! append == s1
+check: 2
+s1 push then break;
 
-trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): aft
-this is temp: oat this is what's before temp: opt and this is what's before that: aft
-count == 1
-add append to stack. 
 
-trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): act
-this is temp: opt this is what's before temp: aft and this is what's before that: act
-count == 1
-add append to stack. 
-
-trying to fix emplacemtn. wrdQueue.front(): apt and path.at(val): ant
-this is temp: aft this is what's before temp: act and this is what's before that: ant
-count == 1
-path.at(append)==s1  break!
-adding to solution: aft
-adding to solution: opt
-adding to solution: oat
-adding to solution: eat
-stk size: 0
-
-**********-------------************: ant --> aft --> opt --> oat --> eat
-clearing map, queue, & stack.
-
-/home/ics46b/projects/proj4/gtest/tests1.cpp:98: Failure
-Value of: r == "ant --> aft --> oft --> oat --> eat"
-  Actual: false
-Expected: true
-[  FAILED  ] ConvertWords.AntToEat (204 ms)
-[----------] 2 tests from ConvertWords (424 ms total)
+******
+This is the size of the solution: 6
+solution:  head --> heal --> teal --> tell --> tall --> tail
+[       OK ] MorgansTest.HeadToTail (125 ms)
+[----------] 1 test from MorgansTest (125 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 5 test cases ran. (425 ms total)
-[  PASSED  ] 6 tests.
-[  FAILED  ] 1 test, listed below:
-[  FAILED  ] ConvertWords.AntToEat
-
- 1 FAILED TEST
+[==========] 8 tests from 6 test cases ran. (345 ms total)
+[  PASSED  ] 8 tests.

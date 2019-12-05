@@ -1,0 +1,352 @@
+==22642== Memcheck, a memory error detector
+==22642== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22642== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==22642== Command: /home/ics46b/projects/proj4/out/bin/a.out.app
+==22642== 
+==22642== Use of uninitialised value of size 8
+==22642==    at 0x407A91: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:64)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642==  Uninitialised value was created by a heap allocation
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x4103E5: std::__1::allocator<int>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40F3F0: std::__1::allocator_traits<std::__1::allocator<int> >::allocate(std::__1::allocator<int>&, unsigned long) (memory:1547)
+==22642==    by 0x40EB12: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2489)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== Use of uninitialised value of size 8
+==22642==    at 0x407D81: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:84)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642==  Uninitialised value was created by a heap allocation
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x4103E5: std::__1::allocator<int>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40F3F0: std::__1::allocator_traits<std::__1::allocator<int> >::allocate(std::__1::allocator<int>&, unsigned long) (memory:1547)
+==22642==    by 0x40EB12: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2489)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== Use of uninitialised value of size 8
+==22642==    at 0x407D9D: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:84)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642==  Uninitialised value was created by a heap allocation
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x4103E5: std::__1::allocator<int>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40F3F0: std::__1::allocator_traits<std::__1::allocator<int> >::allocate(std::__1::allocator<int>&, unsigned long) (memory:1547)
+==22642==    by 0x40EB12: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2489)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== Use of uninitialised value of size 8
+==22642==    at 0x407EC1: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:90)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642==  Uninitialised value was created by a heap allocation
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x4103E5: std::__1::allocator<int>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40F3F0: std::__1::allocator_traits<std::__1::allocator<int> >::allocate(std::__1::allocator<int>&, unsigned long) (memory:1547)
+==22642==    by 0x40EB12: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2489)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== Use of uninitialised value of size 8
+==22642==    at 0x407EDD: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:90)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642==  Uninitialised value was created by a heap allocation
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x4103E5: std::__1::allocator<int>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40F3F0: std::__1::allocator_traits<std::__1::allocator<int> >::allocate(std::__1::allocator<int>&, unsigned long) (memory:1547)
+==22642==    by 0x40EB12: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2489)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 
+==22642== Process terminating with default action of signal 2 (SIGINT)
+==22642==    at 0x5F8F152: write (write.c:27)
+==22642==    by 0x5F0A1BC: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1203)
+==22642==    by 0x5F0BF50: new_do_write (fileops.c:457)
+==22642==    by 0x5F0BF50: _IO_do_write@@GLIBC_2.2.5 (fileops.c:433)
+==22642==    by 0x5F0A9EC: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1266)
+==22642==    by 0x5EFE976: fwrite (iofwrite.c:39)
+==22642==    by 0x50AA66A: ??? (__std_stream:272)
+==22642==    by 0x50A70B7: sputc (streambuf:223)
+==22642==    by 0x50A70B7: operator= (iterator:1073)
+==22642==    by 0x50A70B7: std::__1::basic_ostream<char, std::__1::char_traits<char> >::put(char) (ostream:897)
+==22642==    by 0x40427A: std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::endl<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) (ostream:1002)
+==22642==    by 0x404236: std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(std::__1::basic_ostream<char, std::__1::char_traits<char> >& (*)(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)) (ostream:196)
+==22642==    by 0x408B6C: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:176)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== HEAP SUMMARY:
+==22642==     in use at exit: 7,893,592 bytes in 52 blocks
+==22642==   total heap usage: 79 allocs, 27 frees, 8,758,112 bytes allocated
+==22642== 
+==22642== 8 bytes in 1 blocks are still reachable in loss record 1 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x410655: std::__1::allocator<int*>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x4105B0: std::__1::allocator_traits<std::__1::allocator<int*> >::allocate(std::__1::allocator<int*>&, unsigned long) (memory:1547)
+==22642==    by 0x40F739: std::__1::__split_buffer<int*, std::__1::allocator<int*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int*>&) (__split_buffer:311)
+==22642==    by 0x40EB04: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2483)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 8 bytes in 1 blocks are still reachable in loss record 2 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x412895: std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x4127F0: std::__1::allocator_traits<std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::allocate(std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&, unsigned long) (memory:1547)
+==22642==    by 0x4119C9: std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&) (__split_buffer:311)
+==22642==    by 0x410DD4: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__add_back_capacity() (deque:2483)
+==22642==    by 0x410B3F: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (deque:1828)
+==22642==    by 0x4098FC: std::__1::stack<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::push(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (stack:200)
+==22642==    by 0x408C3C: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:185)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 32 bytes in 1 blocks are still reachable in loss record 3 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x412895: std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x4127F0: std::__1::allocator_traits<std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::allocate(std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&, unsigned long) (memory:1547)
+==22642==    by 0x4119C9: std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&) (__split_buffer:311)
+==22642==    by 0x410DD4: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__add_back_capacity() (deque:2483)
+==22642==    by 0x410B3F: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (deque:1828)
+==22642==    by 0x40963C: std::__1::queue<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::push(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (queue:306)
+==22642==    by 0x40800A: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:96)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 48 bytes in 1 blocks are still reachable in loss record 4 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x50E170B: __libcpp_allocate (new:239)
+==22642==    by 0x50E170B: allocate (memory:1814)
+==22642==    by 0x50E170B: allocate (memory:1547)
+==22642==    by 0x50E170B: __grow_by_and_replace (string:2155)
+==22642==    by 0x50E170B: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long) (string:2222)
+==22642==    by 0x50E1629: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (string:2274)
+==22642==    by 0x403493: WordSet::reSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int) (app/Wordset.cpp:115)
+==22642==    by 0x4030FA: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:46)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== 48 bytes in 1 blocks are possibly lost in loss record 5 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x50E170B: __libcpp_allocate (new:239)
+==22642==    by 0x50E170B: allocate (memory:1814)
+==22642==    by 0x50E170B: allocate (memory:1547)
+==22642==    by 0x50E170B: __grow_by_and_replace (string:2155)
+==22642==    by 0x50E170B: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long) (string:2222)
+==22642==    by 0x50E1629: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (string:2274)
+==22642==    by 0x403493: WordSet::reSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int) (app/Wordset.cpp:115)
+==22642==    by 0x4030FA: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:46)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== 48 bytes in 1 blocks are indirectly lost in loss record 6 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x50E170B: __libcpp_allocate (new:239)
+==22642==    by 0x50E170B: allocate (memory:1814)
+==22642==    by 0x50E170B: allocate (memory:1547)
+==22642==    by 0x50E170B: __grow_by_and_replace (string:2155)
+==22642==    by 0x50E170B: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long) (string:2222)
+==22642==    by 0x50E1629: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (string:2274)
+==22642==    by 0x403277: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:61)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== 80 bytes in 1 blocks are still reachable in loss record 7 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x40DD1F: std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40DBA0: std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > >::allocate(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >&, unsigned long) (memory:1547)
+==22642==    by 0x40D4F3: std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char const (&) [1]>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char const (&) [1]) (__tree:2211)
+==22642==    by 0x40D27D: std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char const (&) [1]>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char const (&) [1]) (__tree:2157)
+==22642==    by 0x40D15C: _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__emplace_uniqueIRS7_RA1_KcEENS_9enable_ifIXsr21__can_extract_map_keyIT_S7_NS_4pairIKS7_S7_EEEE5valueENSM_INS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEEE4typeEOSL_OT0_ (__tree:1173)
+==22642==    by 0x4095C4: std::__1::pair<std::__1::__map_iterator<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long> >, bool> std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::emplace<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char const (&) [1]>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char const (&) [1]) (map:1145)
+==22642==    by 0x407869: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:42)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 80 bytes in 1 blocks are still reachable in loss record 8 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x40DD1F: std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40DBA0: std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > >::allocate(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >&, unsigned long) (memory:1547)
+==22642==    by 0x413363: std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (__tree:2211)
+==22642==    by 0x41328D: std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (__tree:2157)
+==22642==    by 0x4131EC: _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__emplace_uniqueIRS7_SG_EENS_9enable_ifIXsr21__can_extract_map_keyIT_S7_NS_4pairIKS7_S7_EEEE5valueENSJ_INS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEEE4typeEOSI_OT0_ (__tree:1173)
+==22642==    by 0x409794: std::__1::pair<std::__1::__map_iterator<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long> >, bool> std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::emplace<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (map:1145)
+==22642==    by 0x407B5E: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:69)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 96 bytes in 2 blocks are indirectly lost in loss record 9 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x50E170B: __libcpp_allocate (new:239)
+==22642==    by 0x50E170B: allocate (memory:1814)
+==22642==    by 0x50E170B: allocate (memory:1547)
+==22642==    by 0x50E170B: __grow_by_and_replace (string:2155)
+==22642==    by 0x50E170B: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*, unsigned long) (string:2222)
+==22642==    by 0x50E1629: std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (string:2274)
+==22642==    by 0x403493: WordSet::reSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int) (app/Wordset.cpp:115)
+==22642==    by 0x4030FA: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:46)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== 272 bytes in 1 blocks are definitely lost in loss record 10 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x402F05: WordSet::WordSet() (app/Wordset.cpp:27)
+==22642==    by 0x403F9D: main (app/main.cpp:14)
+==22642== 
+==22642== 400 bytes in 5 blocks are still reachable in loss record 11 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x40DD1F: std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40DBA0: std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > >::allocate(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >&, unsigned long) (memory:1547)
+==22642==    by 0x413363: std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (__tree:2211)
+==22642==    by 0x41328D: std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (__tree:2157)
+==22642==    by 0x4131EC: _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__emplace_uniqueIRS7_SG_EENS_9enable_ifIXsr21__can_extract_map_keyIT_S7_NS_4pairIKS7_S7_EEEE5valueENSJ_INS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEEE4typeEOSI_OT0_ (__tree:1173)
+==22642==    by 0x409794: std::__1::pair<std::__1::__map_iterator<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long> >, bool> std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::emplace<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (map:1145)
+==22642==    by 0x407DD4: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:85)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 552 bytes in 1 blocks are still reachable in loss record 12 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x5EFDE49: __fopen_internal (iofopen.c:65)
+==22642==    by 0x5EFDE49: fopen@@GLIBC_2.2.5 (iofopen.c:89)
+==22642==    by 0x4072F9: std::__1::basic_filebuf<char, std::__1::char_traits<char> >::open(char const*, unsigned int) (fstream:556)
+==22642==    by 0x404353: std::__1::basic_ifstream<char, std::__1::char_traits<char> >::basic_ifstream(char const*, unsigned int) (fstream:1211)
+==22642==    by 0x403FB3: main (app/main.cpp:15)
+==22642== 
+==22642== 1,200 bytes in 15 blocks are still reachable in loss record 13 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x40DD1F: std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40DBA0: std::__1::allocator_traits<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > >::allocate(std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> >&, unsigned long) (memory:1547)
+==22642==    by 0x413363: std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (__tree:2211)
+==22642==    by 0x41328D: std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (__tree:2157)
+==22642==    by 0x4131EC: _ZNSt3__16__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEES7_EENS_19__map_value_compareIS7_S8_NS_4lessIS7_EELb1EEENS5_IS8_EEE16__emplace_uniqueIRS7_SG_EENS_9enable_ifIXsr21__can_extract_map_keyIT_S7_NS_4pairIKS7_S7_EEEE5valueENSJ_INS_15__tree_iteratorIS8_PNS_11__tree_nodeIS8_PvEElEEbEEE4typeEOSI_OT0_ (__tree:1173)
+==22642==    by 0x409794: std::__1::pair<std::__1::__map_iterator<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*, long> >, bool> std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::emplace<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) (map:1145)
+==22642==    by 0x408205: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:118)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 4,080 bytes in 1 blocks are still reachable in loss record 14 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x41266F: std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x4116B0: std::__1::allocator_traits<std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::allocate(std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&, unsigned long) (memory:1547)
+==22642==    by 0x410DE2: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__add_back_capacity() (deque:2489)
+==22642==    by 0x410B3F: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (deque:1828)
+==22642==    by 0x40963C: std::__1::queue<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::push(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (queue:306)
+==22642==    by 0x40795E: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:53)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 4,080 bytes in 1 blocks are still reachable in loss record 15 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x41266F: std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x4116B0: std::__1::allocator_traits<std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::allocate(std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&, unsigned long) (memory:1547)
+==22642==    by 0x410DE2: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__add_back_capacity() (deque:2489)
+==22642==    by 0x410B3F: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (deque:1828)
+==22642==    by 0x4098FC: std::__1::stack<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::push(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (stack:200)
+==22642==    by 0x408C3C: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:185)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 4,096 bytes in 1 blocks are still reachable in loss record 16 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x404AE8: std::__1::basic_filebuf<char, std::__1::char_traits<char> >::setbuf(char*, long) (fstream:887)
+==22642==    by 0x407277: std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() (fstream:311)
+==22642==    by 0x404332: std::__1::basic_ifstream<char, std::__1::char_traits<char> >::basic_ifstream(char const*, unsigned int) (fstream:1147)
+==22642==    by 0x403FB3: main (app/main.cpp:15)
+==22642== 
+==22642== 4,096 bytes in 1 blocks are still reachable in loss record 17 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x4103E5: std::__1::allocator<int>::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x40F3F0: std::__1::allocator_traits<std::__1::allocator<int> >::allocate(std::__1::allocator<int>&, unsigned long) (memory:1547)
+==22642==    by 0x40EB12: std::__1::deque<int, std::__1::allocator<int> >::__add_back_capacity() (deque:2489)
+==22642==    by 0x40E86F: std::__1::deque<int, std::__1::allocator<int> >::push_back(int const&) (deque:1828)
+==22642==    by 0x40960C: std::__1::queue<int, std::__1::deque<int, std::__1::allocator<int> > >::push(int const&) (queue:306)
+==22642==    by 0x40792B: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:49)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 8,160 bytes in 2 blocks are still reachable in loss record 18 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x40DE0C: std::__1::__libcpp_allocate(unsigned long, unsigned long) (new:239)
+==22642==    by 0x41266F: std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >::allocate(unsigned long, void const*) (memory:1814)
+==22642==    by 0x4116B0: std::__1::allocator_traits<std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::allocate(std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&, unsigned long) (memory:1547)
+==22642==    by 0x410DE2: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__add_back_capacity() (deque:2489)
+==22642==    by 0x410B3F: std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::push_back(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (deque:1828)
+==22642==    by 0x40963C: std::__1::queue<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::deque<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::push(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) (queue:306)
+==22642==    by 0x40800A: convert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, WordSet const&) (app/proj4.cpp:96)
+==22642==    by 0x404017: main (app/main.cpp:18)
+==22642== 
+==22642== 1,966,304 bytes in 1 blocks are possibly lost in loss record 19 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x403331: WordSet::reSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int) (app/Wordset.cpp:109)
+==22642==    by 0x4030FA: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:46)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== 1,967,712 (1,967,568 direct, 144 indirect) bytes in 12 blocks are definitely lost in loss record 20 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x403331: WordSet::reSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int) (app/Wordset.cpp:109)
+==22642==    by 0x4030FA: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:46)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== 3,932,336 bytes in 1 blocks are still reachable in loss record 21 of 21
+==22642==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22642==    by 0x50DC7D9: operator new(unsigned long) (new.cpp:72)
+==22642==    by 0x403331: WordSet::reSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, int) (app/Wordset.cpp:109)
+==22642==    by 0x4030FA: WordSet::insert(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >) (app/Wordset.cpp:46)
+==22642==    by 0x407708: loadWordsIntoTable(WordSet&, std::__1::basic_istream<char, std::__1::char_traits<char> >&) (app/proj4.cpp:22)
+==22642==    by 0x403FC8: main (app/main.cpp:16)
+==22642== 
+==22642== LEAK SUMMARY:
+==22642==    definitely lost: 1,967,840 bytes in 13 blocks
+==22642==    indirectly lost: 144 bytes in 3 blocks
+==22642==      possibly lost: 1,966,352 bytes in 2 blocks
+==22642==    still reachable: 3,959,256 bytes in 34 blocks
+==22642==                       of which reachable via heuristic:
+==22642==                         newarray           : 3,932,336 bytes in 1 blocks
+==22642==         suppressed: 0 bytes in 0 blocks
+==22642== 
+==22642== For counts of detected and suppressed errors, rerun with: -v
+==22642== ERROR SUMMARY: 2976 errors from 9 contexts (suppressed: 0 from 0)
